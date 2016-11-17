@@ -10,56 +10,33 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+    var matrix: Matrix
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
+    override init(size: CGSize){
+        self.matrix = Matrix(rows: NR_OF_ROWS,columns: NR_OF_COLUMNS)
+        super.init(size: size)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func didMove(to view: SKView) {
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
-        
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(M_PI), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
+        self.setupGame()
     }
     
     
     func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -86,4 +63,35 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
+    
+    /* necessary game functions */
+    func setupGame()
+    {
+        var xPosition = 0 //125/2
+        var yPosition = 667
+        var rows = NR_OF_ROWS
+        var columns = NR_OF_COLUMNS
+        matrix.initiateElements()
+        
+        var tempPosY = 0
+        for row in 0..<rows{
+            var tempPosX = 0
+            for column in 0..<columns{
+                var element = matrix.getElement(row: row, column: column)
+                if(element != nil){
+                    let background = element.sprite!
+                    background.anchorPoint = CGPoint(x: 0, y: 1)
+                    background.size = CGSize(width: 50.0, height: 50.0)
+                    background.position = CGPoint(x:xPosition + tempPosX, y:yPosition + tempPosY);
+                    self.addChild(background)
+                }
+                tempPosX = tempPosX + 50
+            }
+            tempPosY = tempPosY - 50
+            tempPosX = 0
+        }
+    }
+
+    
+    
 }
