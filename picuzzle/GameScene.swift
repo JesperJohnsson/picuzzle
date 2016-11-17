@@ -79,7 +79,7 @@ class GameScene: SKScene {
             for column in 0..<columns{
                 var element = matrix.getElement(row: row, column: column)
                 if(element != nil){
-                    let background = element.sprite!
+                    let background = element.sprite
                     background.anchorPoint = CGPoint(x: 0, y: 1)
                     background.size = CGSize(width: 50.0, height: 50.0)
                     background.position = CGPoint(x:xPosition + tempPosX, y:yPosition + tempPosY);

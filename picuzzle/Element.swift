@@ -12,7 +12,7 @@ import SpriteKit
 class Element{
     var row: Int
     var column: Int
-    var sprite: SKSpriteNode?
+    var sprite: SKSpriteNode
     var id: Int
     
     init(row: Int, column: Int){
@@ -20,5 +20,13 @@ class Element{
         self.row = row
         self.column = column
         self.sprite = SKSpriteNode(imageNamed: "example.png")
+    }
+    
+    init(row: Int, column: Int, id: Int, sp: String){
+        print(sp)
+        self.id = id
+        self.row = row
+        self.column = column
+        self.sprite = SKSpriteNode(imageNamed: sp)
     }
 }
