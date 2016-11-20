@@ -10,10 +10,17 @@ import Foundation
 import SpriteKit
 
 class Element{
-    var row: Int
-    var column: Int
+    var row: Int?
+    var column: Int?
     var sprite: SKSpriteNode
     var id: Int
+    
+    init(){
+        self.id = -1
+        self.row = -1
+        self.column = -1
+        self.sprite = SKSpriteNode()
+    }
     
     init(row: Int, column: Int){
         self.id = 0
@@ -28,5 +35,10 @@ class Element{
         self.row = row
         self.column = column
         self.sprite = SKSpriteNode(imageNamed: sp)
+    }
+    
+    func setCordinates(row: Int, column: Int){
+        self.row = row
+        self.column = column
     }
 }
