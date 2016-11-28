@@ -16,8 +16,6 @@ class FinishedScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
 
     /*
