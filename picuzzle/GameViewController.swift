@@ -11,6 +11,16 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
+    private var _selectedMode: String!
+    
+    var selectedMode: String {
+        get {
+            return _selectedMode
+        } set {
+            _selectedMode = newValue
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
