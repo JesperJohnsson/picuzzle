@@ -53,6 +53,7 @@ class GameViewController: UIViewController {
         /* Function for future use? */
         print("callback")
         //self.gameoverScene.setResult(result: points)
+        performSegue(withIdentifier: "back", sender: nil)
     }
 
     override var shouldAutorotate: Bool {

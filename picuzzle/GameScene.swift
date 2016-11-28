@@ -62,11 +62,6 @@ class GameScene: SKScene {
     func setPoint(){
         self.points += 1
         self.result.text = String(self.points)
-        
-        if let handler = pointsHandler {
-            let points = self.points
-            handler(points)
-        }
     }
     
     func getPoints()->Int{
@@ -84,7 +79,12 @@ class GameScene: SKScene {
         label.text = String(self.seconds)
         if(self.seconds == 0){
             self.timer.invalidate()
-            self.gameOver()
+            //self.gameOver()
+            
+            if let handler = pointsHandler {
+                let points = self.points
+                handler(points)
+            }
         }
     }
     
