@@ -10,39 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Index View Controller-->
-        <scene sceneID="Xqp-ch-ThC">
-            <objects>
-                <viewController id="kET-lA-Sqe" customClass="IndexViewController" customModule="picuzzle" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oxC-EB-oPr"/>
-                        <viewControllerLayoutGuide type="bottom" id="2Zq-fz-0cp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5qA-BR-N1t">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGF-VE-kKi">
-                                <rect key="frame" x="147" y="318" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start game"/>
-                                <connections>
-                                    <segue destination="BV1-FR-VrT" kind="modal" modalTransitionStyle="crossDissolve" id="cHX-4T-08B"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITF-ta-jRg">
-                                <rect key="frame" x="145" y="356" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Highscore"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uvI-xc-XS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="316" y="36"/>
-        </scene>
         <!--Highscore View Controller-->
         <scene sceneID="ID1-yK-NLl">
             <objects>
@@ -605,7 +572,4 @@
             <point key="canvasLocation" x="316" y="791"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="cHX-4T-08B"/>
-    </inferredMetricsTieBreakers>
 </document>
