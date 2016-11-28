@@ -12,26 +12,12 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
-    var scene: GameScene!
+    var gameboardScene: GameScene!
+    var gameoverScene: GMScene!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       /* if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
-        }*/
+    
         let skView = view as! SKView
         
         skView.showsFPS = true
@@ -39,10 +25,24 @@ class GameViewController: UIViewController {
         
         skView.isMultipleTouchEnabled = false
         
-        self.scene = GameScene(size: skView.bounds.size)
-        scene.scaleMode = .aspectFill
-        skView.presentScene(self.scene)
+        self.gameoverScene = GMScene(size: skView.bounds.size)
         
+        self.gameboardScene = GameScene(size: skView.bounds.size)
+        self.gameboardScene.name = "gameboard"
+        gameboardScene.scaleMode = .aspectFill
+        skView.presentScene(self.gameboardScene)
+    
+        gameboardScene.pointsHandler = gameOverPoints
+        
+        var s = skView.scene!
+        print("SCENE NAME")
+        print(String(describing: s.name))
+    }
+    
+    func gameOverPoints(_ points: Int){
+        /* Function for future use? */
+        print("callback")
+        //self.gameoverScene.setResult(result: points)
     }
 
     override var shouldAutorotate: Bool {

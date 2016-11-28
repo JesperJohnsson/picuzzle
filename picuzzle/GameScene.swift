@@ -14,6 +14,15 @@ class GameScene: SKScene {
     var gameBoard: SKNode
     var grab: Grab
     var nrOfElements: Int
+    var nrOfClicks: Int
+    var timer: Timer
+    var seconds: Int
+    var label: SKLabelNode
+    var result: SKLabelNode
+    
+    /* TEST VARIABLES*/
+    var points: Int
+    var pointsHandler: ((Int) -> ())?
     
     /* SET GRAB CLAS */
     
@@ -22,6 +31,7 @@ class GameScene: SKScene {
         self.gameBoard = SKNode()
         self.grab = Grab()
         self.nrOfElements = ELEMENT_HEIGHT * ELEMENT_WIDTH
+        self.points = 0
         
         let TileWidth: CGFloat = 50.0
         let TileHeight: CGFloat = 50.0
@@ -29,8 +39,53 @@ class GameScene: SKScene {
             x: -TileWidth * CGFloat(ELEMENT_WIDTH) / 2,
             y: -TileHeight * CGFloat(ELEMENT_HEIGHT) / 2)
         self.gameBoard.position = gamePos
+        self.nrOfClicks = 0
+        self.timer = Timer()
+        self.seconds = 0
+        self.label = SKLabelNode(fontNamed:"Arial")
+        self.result = SKLabelNode(fontNamed:"Arial")
         
         super.init(size: size)
+        
+        self.label.text = "00.00";
+        self.label.fontSize = 45;
+        self.label.position = CGPoint(x:self.frame.midX, y:self.frame.midY);
+        self.addChild(self.label)
+        
+        self.result.text = String(self.points);
+        self.result.fontSize = 30;
+        self.result.position = CGPoint(x:self.frame.midX, y:self.frame.midY - 50);
+        self.addChild(self.result)
+        setTimer()
+    }
+    
+    func setPoint(){
+        self.points += 1
+        self.result.text = String(self.points)
+        
+        if let handler = pointsHandler {
+            let points = self.points
+            handler(points)
+        }
+    }
+    
+    func getPoints()->Int{
+        return self.points
+    }
+    
+    func setTimer(){
+        self.seconds = 10
+        label.text = String(self.seconds)
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameScene.counter), userInfo: nil, repeats: true)
+    }
+    
+    func counter(){
+        self.seconds -= 1
+        label.text = String(self.seconds)
+        if(self.seconds == 0){
+            self.timer.invalidate()
+            self.gameOver()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -58,12 +113,13 @@ class GameScene: SKScene {
         let (success, rowen, columnen) = convertPoint(location!)
         if success{
             let foundElement = self.matrix.getElement(row: rowen, column: columnen)
+            self.nrOfClicks += 1
             
             /* SET ELEMENT INTO GRAB */
             print(foundElement.id)
             var prevElem = self.grab.getElement()
             
-            if(foundElement.row == prevElem.row && foundElement.column == prevElem.column){
+            if(foundElement.row == prevElem.row && foundElement.column == prevElem.column && self.nrOfClicks == 2){
                 //nothing
                 print("SAME ELEMENT")
                 self.animateInActiveElement(elem: foundElement)
@@ -71,17 +127,39 @@ class GameScene: SKScene {
             }
             else{
                 self.animateActiveElement(elem: foundElement)
-                if(foundElement.id == self.grab.getElement().id){
-                    print("ITS A MATCH!")
+                if(foundElement.id == self.grab.getElement().id && self.nrOfClicks == 2){
+                    self.nrOfClicks = 0
+                    self.removeElement(element: self.grab.getElement())
+                    self.removeElement(element: foundElement)
+                    self.setPoint()
+                }
+                else if(self.nrOfClicks == 2){
+                    print("not same element");
+                    self.nrOfClicks = 0
+                    self.animateInActiveElement(elem: self.grab.getElement())
+                    self.animateInActiveElement(elem: foundElement)
                 }
                 self.grab.setElement(element: foundElement)
             }
+            
         }
         else{ print("miss")}
     }
     
-    func removeElement(){
+    func removeElement(element: Element){
+        var tempElem: Element?
+        tempElem = element
         
+            
+        if let sprite = tempElem?.sprite {
+            if sprite.action(forKey: "removing") == nil {
+                print("PANG PUNG")
+                let scaleAction = SKAction.scale(to: 0.1, duration: 0.3)
+                scaleAction.timingMode = .easeOut
+                sprite.run(SKAction.sequence([scaleAction, SKAction.removeFromParent()]),
+                           withKey:"removing")
+            }
+        }
     }
     
     func comareElements(){
@@ -102,7 +180,7 @@ class GameScene: SKScene {
         var time = 0.2
         let scale = SKAction.scale(by: 2.0, duration: time)
         let colorize = SKAction.colorize(with: .black,colorBlendFactor: 1, duration: 2)
-        monsterSprite.run(colorize)
+        monsterSprite.run(scale)
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -165,8 +243,19 @@ class GameScene: SKScene {
     }
     
     func gameOver(){
-    //let trans = SKTransition.fade(withDuration: 0.5)
-    //let goScene = GameOverScene(size: self.size)
-    //self.view?.presentScene(goScene, transisition: trans)
+        //let trans = SKTransition.fade(withDuration: 0.5)
+        let trans = SKTransition.doorsCloseHorizontal(withDuration: 1.0)
+        let goScene = GMScene(size: self.size)
+        goScene.name = "gameover scene"
+        goScene.setResult(result: self.points)
+        self.view?.presentScene(goScene, transition: trans)
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        /*if (segue.identifier == "gameover")
+        {
+            let DestViewController : GMScene = segue.destView as! GMScene
+        }*/
     }
 }
