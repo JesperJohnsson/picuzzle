@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvI-xc-XS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-650.39999999999998" y="36.431784107946029"/>
+            <point key="canvasLocation" x="316" y="36"/>
         </scene>
         <!--Highscore View Controller-->
         <scene sceneID="ID1-yK-NLl">
@@ -606,6 +606,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tHA-BY-gqx"/>
+        <segue reference="cHX-4T-08B"/>
     </inferredMetricsTieBreakers>
 </document>
