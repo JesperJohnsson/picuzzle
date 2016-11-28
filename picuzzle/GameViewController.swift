@@ -11,6 +11,16 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
+    private var _selectedMode: String!
+    
+    var selectedMode: String {
+        get {
+            return _selectedMode
+        } set {
+            _selectedMode = newValue
+        }
+    }
 
     var gameboardScene: GameScene!
     var gameoverScene: GMScene!

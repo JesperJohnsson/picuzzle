@@ -1,30 +1,22 @@
 //
-//  IndexViewController.swift
+//  FinishedScreenViewController.swift
 //  picuzzle
 //
-<<<<<<< HEAD
-//  Created by Dennis Rojas on 2016-11-17.
-=======
-//  Created by Jesper Johnsson on 2016-11-21.
->>>>>>> master
+//  Created by Jesper Johnsson on 2016-11-28.
 //  Copyright © 2016 Jesper Johnsson. All rights reserved.
 //
 
 import UIKit
 
-class IndexViewController: UIViewController {
+class FinishedScreenViewController: UIViewController {
 
+    @IBOutlet weak var pointLbl: UILabel!
+    @IBOutlet weak var textResultLbl: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
