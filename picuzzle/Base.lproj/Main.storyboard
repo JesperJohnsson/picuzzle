@@ -427,7 +427,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiplayer local" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rot-oZ-a6c">
-                                        <rect key="frame" x="112.5" y="30" width="150" height="21"/>
+                                        <rect key="frame" x="113" y="30" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="XG2-Q5-6hc"/>
                                             <constraint firstAttribute="height" constant="21" id="d38-6l-Fcv"/>
@@ -460,18 +460,75 @@
                                     <constraint firstItem="rot-oZ-a6c" firstAttribute="centerX" secondItem="YSo-hT-2gD" secondAttribute="centerX" id="wV2-8N-6z1"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="efs-bC-byi">
+                                <rect key="frame" x="16" y="85" width="343" height="161"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QMr-ky-7ic">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obo-Xb-71R">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TGP-Bs-fs6">
+                                                <rect key="frame" x="0.0" y="20.5" width="343" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LCf-kI-7bF">
+                                        <rect key="frame" x="0.0" y="65.5" width="343" height="50.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVr-2K-fGq">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1C-5j-5ld">
+                                                <rect key="frame" x="0.0" y="20.5" width="343" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3G-7W-OgX">
+                                        <rect key="frame" x="0.0" y="131" width="343" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Start game">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startGameBtnPressed:" destination="zOI-Cz-g47" eventType="touchUpInside" id="W0e-kV-YZy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="efs-bC-byi" firstAttribute="top" secondItem="YSo-hT-2gD" secondAttribute="bottom" constant="25" id="2Tu-Tm-cUP"/>
                             <constraint firstItem="YSo-hT-2gD" firstAttribute="leading" secondItem="L1E-oM-thL" secondAttribute="leading" id="A6g-eX-lE0"/>
                             <constraint firstAttribute="trailing" secondItem="YSo-hT-2gD" secondAttribute="trailing" id="OtB-WP-xhv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="efs-bC-byi" secondAttribute="trailing" id="T8b-Ag-knh"/>
                             <constraint firstItem="YSo-hT-2gD" firstAttribute="top" secondItem="L1E-oM-thL" secondAttribute="top" id="V8F-Sl-CoY"/>
+                            <constraint firstItem="efs-bC-byi" firstAttribute="leading" secondItem="L1E-oM-thL" secondAttribute="leadingMargin" id="eMP-l2-Imq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="player1Name" destination="TGP-Bs-fs6" id="UxC-vN-hQP"/>
+                        <outlet property="player2Name" destination="r1C-5j-5ld" id="o2j-jf-BLp"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="GameViewController" id="Z81-3m-dum"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyg-Ok-8WX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="36"/>
+            <point key="canvasLocation" x="-476" y="35.532233883058474"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -572,4 +629,7 @@
             <point key="canvasLocation" x="316" y="791"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Z81-3m-dum"/>
+    </inferredMetricsTieBreakers>
 </document>
