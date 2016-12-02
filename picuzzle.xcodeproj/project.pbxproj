@@ -20,6 +20,7 @@
 		0B6577B01DDDDF7600DFE24E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6577AE1DDDDF7600DFE24E /* Main.storyboard */; };
 		0B6577B21DDDDF7600DFE24E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B6577B11DDDDF7600DFE24E /* Assets.xcassets */; };
 		0B6577B51DDDDF7600DFE24E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6577B31DDDDF7600DFE24E /* LaunchScreen.storyboard */; };
+		0B71B5461DF1DC0400F399A4 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B71B5451DF1DC0400F399A4 /* ContentViewController.swift */; };
 		0B78AC251DEC2F7F00FA719D /* ChooseModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC241DEC2F7F00FA719D /* ChooseModeViewController.swift */; };
 		0B78AC271DEC468C00FA719D /* MultiplayerLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC261DEC468C00FA719D /* MultiplayerLocalViewController.swift */; };
 		0B78AC291DEC477F00FA719D /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC281DEC477F00FA719D /* LoadingScreenViewController.swift */; };
@@ -42,6 +43,7 @@
 		0B6577B11DDDDF7600DFE24E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B6577B41DDDDF7600DFE24E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B6577B61DDDDF7600DFE24E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B71B5451DF1DC0400F399A4 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		0B78AC241DEC2F7F00FA719D /* ChooseModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseModeViewController.swift; sourceTree = "<group>"; };
 		0B78AC261DEC468C00FA719D /* MultiplayerLocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplayerLocalViewController.swift; sourceTree = "<group>"; };
 		0B78AC281DEC477F00FA719D /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				0B78AC281DEC477F00FA719D /* LoadingScreenViewController.swift */,
 				0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */,
 				0B4DC0101DF0815100B96138 /* Player.swift */,
+				0B71B5451DF1DC0400F399A4 /* ContentViewController.swift */,
 			);
 			path = picuzzle;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				0B6577AB1DDDDF7600DFE24E /* GameScene.swift in Sources */,
 				0B78AC271DEC468C00FA719D /* MultiplayerLocalViewController.swift in Sources */,
 				0B78AC2B1DEC4BBC00FA719D /* FinishedScreenViewController.swift in Sources */,
+				0B71B5461DF1DC0400F399A4 /* ContentViewController.swift in Sources */,
 				0B6577AD1DDDDF7600DFE24E /* GameViewController.swift in Sources */,
 				0B4DC0111DF0815100B96138 /* Player.swift in Sources */,
 				0B321D761DE226E000704BF9 /* Highscore.swift in Sources */,

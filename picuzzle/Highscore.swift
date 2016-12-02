@@ -26,4 +26,12 @@ class Highscore {
         
         scores = scores.sorted(by: {$0.value > $1.value})
     }
+    
+    func getScore(index: Int) -> Score {
+        return scores[index]
+    }
+    
+    func getCount() -> Int {
+        return scores.count
+    }
 }
