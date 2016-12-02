@@ -86,8 +86,24 @@ class Matrix{
         
     }
     
-    func getElement(row: Int, column: Int)->Element{
-        return self.matrix[row][column]!
+    func getNrOfElements()->Int{
+        var nrOfElements = 0
+        for row in 0..<NR_OF_ROWS{
+            for column in 0..<NR_OF_COLUMNS{
+                if(self.matrix[row][column] != nil){
+                   nrOfElements = nrOfElements + 1
+                }
+            }
+        }
+        return nrOfElements
+    }
+    
+    func getElement(row: Int, column: Int)->Element!{
+        return self.matrix[row][column]
+    }
+    
+    func removeElement(row: Int, column: Int){
+        self.matrix[row][column] = nil
     }
     
     func initiateElements(){

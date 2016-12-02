@@ -19,6 +19,7 @@ class GameScene: SKScene {
     var seconds: Int
     var label: SKLabelNode
     var result: SKLabelNode
+    var mode: String
     
     /* TEST VARIABLES*/
     var points: Int
@@ -27,6 +28,7 @@ class GameScene: SKScene {
     /* SET GRAB CLAS */
     
     override init(size: CGSize){
+        self.mode = "Time Attack"
         self.matrix = Matrix(rows: NR_OF_ROWS,columns: NR_OF_COLUMNS)
         self.gameBoard = SKNode()
         self.grab = Grab()
@@ -56,7 +58,19 @@ class GameScene: SKScene {
         self.result.fontSize = 30;
         self.result.position = CGPoint(x:self.frame.midX, y:self.frame.midY - 50);
         self.addChild(self.result)
-        setTimer()
+    }
+    
+    func gameInitiate(mode: String){
+        switch mode{
+        case "Time Attack":
+            self.mode = "Time Attack"
+            self.setTimeAttackTimer()
+        case "Time Trial":
+            self.mode = "Time Trial"
+            self.setTimeTrialTimer()
+        default:
+            self.mode = "Time Attack"
+        }
     }
     
     func setPoint(){
@@ -68,18 +82,38 @@ class GameScene: SKScene {
         return self.points
     }
     
-    func setTimer(){
-        self.seconds = 10
+    func setTimeAttackTimer(){
+        /* TIDEN GÅR NER */
+        self.seconds = 40
         label.text = String(self.seconds)
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameScene.counter), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameScene.counterDown), userInfo: nil, repeats: true)
     }
     
-    func counter(){
+    func setTimeTrialTimer(){
+        /* TIDEN GÅR NER */
+        self.seconds = 0
+        label.text = String(self.seconds)
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameScene.counterUp), userInfo: nil, repeats: true)
+    }
+    
+    func counterUp(){
+        self.seconds += 1
+        label.text = String(self.seconds)
+        if(self.matrix.getNrOfElements() == 0){
+            self.timer.invalidate()
+            
+            if let handler = pointsHandler {
+                let points = self.points
+                handler(points)
+            }
+        }
+    }
+    
+    func counterDown(){
         self.seconds -= 1
         label.text = String(self.seconds)
         if(self.seconds == 0){
             self.timer.invalidate()
-            //self.gameOver()
             
             if let handler = pointsHandler {
                 let points = self.points
@@ -112,11 +146,10 @@ class GameScene: SKScene {
         
         let (success, rowen, columnen) = convertPoint(location!)
         if success{
-            let foundElement = self.matrix.getElement(row: rowen, column: columnen)
+            let foundElement = self.matrix.getElement(row: rowen, column: columnen)!
             self.nrOfClicks += 1
             
             /* SET ELEMENT INTO GRAB */
-            print(foundElement.id)
             var prevElem = self.grab.getElement()
             
             if(foundElement.row == prevElem.row && foundElement.column == prevElem.column && self.nrOfClicks == 2){
@@ -132,6 +165,12 @@ class GameScene: SKScene {
                     self.removeElement(element: self.grab.getElement())
                     self.removeElement(element: foundElement)
                     self.setPoint()
+                    
+                    print(self.matrix.getNrOfElements())
+                    if(self.mode == "Time Attack" && self.matrix.getNrOfElements() == 0){
+                        print("GAME OVER")
+                        self.createAndShuffleElems()
+                    }
                 }
                 else if(self.nrOfClicks == 2){
                     print("not same element");
@@ -146,6 +185,11 @@ class GameScene: SKScene {
         else{ print("miss")}
     }
     
+    func createAndShuffleElems(){
+        self.matrix.createElements();
+        self.setupGame();
+    }
+    
     func removeElement(element: Element){
         var tempElem: Element?
         tempElem = element
@@ -158,6 +202,7 @@ class GameScene: SKScene {
                 scaleAction.timingMode = .easeOut
                 sprite.run(SKAction.sequence([scaleAction, SKAction.removeFromParent()]),
                            withKey:"removing")
+                self.matrix.removeElement(row: (tempElem?.row)!, column: (tempElem?.column)!)
             }
         }
     }
@@ -215,8 +260,8 @@ class GameScene: SKScene {
             for column in 0..<columns{
                 var element = matrix.getElement(row: row, column: column)
                 if(element != nil){
-                    let background = element.sprite
-                    background.anchorPoint = CGPoint(x: 0, y: 1)
+                    let background = element!.sprite
+                    background.anchorPoint = CGPoint(x: 0, y: 1) // 0, 1
                     background.size = CGSize(width: CGFloat(ELEMENT_WIDTH), height: CGFloat(ELEMENT_HEIGHT))
                     background.position = CGPoint(x:xPosition + tempPosX, y:yPosition + tempPosY);
                     self.addChild(background)

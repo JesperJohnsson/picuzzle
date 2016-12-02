@@ -38,7 +38,9 @@ class GameViewController: UIViewController {
         self.gameoverScene = GMScene(size: skView.bounds.size)
         
         self.gameboardScene = GameScene(size: skView.bounds.size)
+        
         self.gameboardScene.name = "gameboard"
+        self.gameboardScene.gameInitiate(mode: _selectedMode)
         gameboardScene.scaleMode = .aspectFill
         skView.presentScene(self.gameboardScene)
     
@@ -52,8 +54,19 @@ class GameViewController: UIViewController {
     func gameOverPoints(_ points: Int){
         /* Function for future use? */
         print("callback")
+        
+        performSegue(withIdentifier: "gameoverSegue", sender: points)
+        /*
+        switch _selectedMode{
+        case "Time Attack":
+            print("Time Attack")
+        case "Time Trial":
+            print("Time Trial")
+        default:
+            print("Time Attack")
+        }*/
         //self.gameoverScene.setResult(result: points)
-        performSegue(withIdentifier: "back", sender: nil)
+        //performSegue(withIdentifier: "back", sender: nil)
     }
 
     override var shouldAutorotate: Bool {
@@ -75,6 +88,14 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? FinishedScreenViewController {
+            if let points = sender as? Int{
+                destination.points = points
+            }
+        }
     }
     
 }
