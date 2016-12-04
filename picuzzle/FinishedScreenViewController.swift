@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FinishedScreenViewController: UIViewController {
 
@@ -17,7 +18,10 @@ class FinishedScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
 
+    
+    
     /*
     // MARK: - Navigation
 
