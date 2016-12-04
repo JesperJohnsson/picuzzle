@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import CoreData
 
 class GameViewController: UIViewController {
     
@@ -54,6 +55,16 @@ class GameViewController: UIViewController {
     func gameOverPoints(_ points: Int){
         /* Function for future use? */
         print("callback")
+        
+        let finalScore = NSEntityDescription.insertNewObject(forEntityName: "AAAScore", into: context) as! AAAScore
+        finalScore.setValue(points, forKey: "value")
+        finalScore.setValue(self.selectedMode, forKey: "type")
+         
+        do {
+            try finalScore.managedObjectContext?.save()
+        } catch {
+            print(error)
+        }
         
         performSegue(withIdentifier: "gameoverSegue", sender: points)
         /*

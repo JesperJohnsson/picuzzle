@@ -21,16 +21,6 @@ class ContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*let score = NSEntityDescription.insertNewObject(forEntityName: "AAAScore", into: context) as! AAAScore
-        score.setValue(15, forKey: "value")
-        score.setValue("Multiplayer", forKey: "type")
-        
-        do {
-            try score.managedObjectContext?.save()
-        } catch {
-            print(error)
-        }*/
-        
         let scoresFetch = NSFetchRequest<AAAScore>(entityName: "AAAScore")
         let predicate = NSPredicate(format: "type = %@", self.titleText)
         scoresFetch.predicate = predicate
