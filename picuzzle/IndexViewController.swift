@@ -1,11 +1,3 @@
-//
-//  IndexViewController.swift
-//  picuzzle
-//
-//  Created by Jesper Johnsson on 2016-11-21.
-//  Copyright © 2016 Jesper Johnsson. All rights reserved.
-//
-
 import UIKit
 
 class IndexViewController: UIViewController {

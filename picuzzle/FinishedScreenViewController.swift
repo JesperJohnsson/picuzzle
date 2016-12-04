@@ -12,10 +12,12 @@ class FinishedScreenViewController: UIViewController {
 
     @IBOutlet weak var pointLbl: UILabel!
     @IBOutlet weak var textResultLbl: UILabel!
-    
+    var points: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("FINISHED " + String(points))
+        pointLbl.text = String(points)
     }
 
     /*

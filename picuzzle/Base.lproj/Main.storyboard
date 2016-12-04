@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0t4-mT-HD8">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0t4-mT-HD8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -486,10 +486,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="MKh-B4-1yb" kind="show" identifier="gameoverSegue" id="VEG-2B-N8n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="790"/>
+            <point key="canvasLocation" x="-518" y="790"/>
         </scene>
         <!--Finished Screen View Controller-->
         <scene sceneID="A88-eK-yFo">
@@ -521,8 +524,8 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU LOSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWj-tO-TY3">
-                                                        <rect key="frame" x="97" y="39" width="141.5" height="35"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POINTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWj-tO-TY3">
+                                                        <rect key="frame" x="115" y="39" width="105.5" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="WOo-Ie-5rC"/>
                                                         </constraints>
@@ -540,6 +543,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="abortBtnPressed:" destination="D1S-hh-S3J" eventType="touchUpInside" id="xk9-1s-PNv"/>
+                                                    <segue destination="0t4-mT-HD8" kind="show" id="4Dc-Qn-ztj"/>
                                                 </connections>
                                             </button>
                                         </subviews>
