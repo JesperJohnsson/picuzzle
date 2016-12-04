@@ -22,28 +22,55 @@ class GameViewController: UIViewController {
         }
     }
 
+    var gameboardScene: GameScene!
+    var gameoverScene: GMScene!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        let skView = view as! SKView
         
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
-        }
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        
+        skView.isMultipleTouchEnabled = false
+        
+        self.gameoverScene = GMScene(size: skView.bounds.size)
+        
+        self.gameboardScene = GameScene(size: skView.bounds.size)
+        
+        self.gameboardScene.name = "gameboard"
+        self.gameboardScene.gameInitiate(mode: _selectedMode)
+        gameboardScene.scaleMode = .aspectFill
+        skView.presentScene(self.gameboardScene)
+    
+        gameboardScene.pointsHandler = gameOverPoints
+        
+        var s = skView.scene!
+        print("SCENE NAME")
+        print(String(describing: s.name))
+    }
+    
+    func gameOverPoints(_ points: Int){
+        /* Function for future use? */
+        print("callback")
+        
+        performSegue(withIdentifier: "gameoverSegue", sender: points)
+        /*
+        switch _selectedMode{
+        case "Time Attack":
+            print("Time Attack")
+        case "Time Trial":
+            print("Time Trial")
+        default:
+            print("Time Attack")
+        }*/
+        //self.gameoverScene.setResult(result: points)
+        //performSegue(withIdentifier: "back", sender: nil)
     }
 
     override var shouldAutorotate: Bool {
-        return true
+        return false
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -62,4 +89,13 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? FinishedScreenViewController {
+            if let points = sender as? Int{
+                destination.points = points
+            }
+        }
+    }
+    
 }
