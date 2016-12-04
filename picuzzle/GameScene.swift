@@ -51,12 +51,12 @@ class GameScene: SKScene {
         
         self.label.text = "00.00";
         self.label.fontSize = 45;
-        self.label.position = CGPoint(x:self.frame.midX, y:self.frame.midY);
+        self.label.position = CGPoint(x:self.frame.midX, y:self.frame.maxY - 100);
         self.addChild(self.label)
         
         self.result.text = String(self.points);
         self.result.fontSize = 30;
-        self.result.position = CGPoint(x:self.frame.midX, y:self.frame.midY - 50);
+        self.result.position = CGPoint(x:self.frame.midX, y:self.frame.maxY - 50);
         self.addChild(self.result)
     }
     
@@ -142,7 +142,7 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first as UITouch!
         let location = touch?.location(in: self.gameBoard)
-        print(location)
+        print("location: " + String(describing: location))
         
         let (success, rowen, columnen) = convertPoint(location!)
         if success{
@@ -165,7 +165,7 @@ class GameScene: SKScene {
                     self.removeElement(element: self.grab.getElement())
                     self.removeElement(element: foundElement)
                     self.setPoint()
-                    
+                    print("1")
                     print(self.matrix.getNrOfElements())
                     if(self.mode == "Time Attack" && self.matrix.getNrOfElements() == 0){
                         print("GAME OVER")
@@ -213,17 +213,17 @@ class GameScene: SKScene {
     
     func animateInActiveElement(elem: Element){
         var monsterSprite = elem.sprite
-        monsterSprite.zPosition = 100
-        var time = 0.2
-        let scale = SKAction.scale(by: 0.5, duration: time)
+        monsterSprite.zPosition = 10
+        var time = 0.1
+        let scale = SKAction.scale(by: 0.8, duration: time)
         monsterSprite.run(scale)
     }
     
     func animateActiveElement(elem: Element){
         var monsterSprite = elem.sprite
         monsterSprite.zPosition = 100
-        var time = 0.2
-        let scale = SKAction.scale(by: 2.0, duration: time)
+        var time = 0.1
+        let scale = SKAction.scale(by: 1.25, duration: time)
         let colorize = SKAction.colorize(with: .black,colorBlendFactor: 1, duration: 2)
         monsterSprite.run(scale)
     }
@@ -246,14 +246,21 @@ class GameScene: SKScene {
     }
     
     /* necessary game functions */
-    func setupGame()
-    {
-        var xPosition = 0 //125/2
-        var yPosition = 667
+    func setupGame(){
+        var middle = self.view?.center;
+        
+        var gamePosMiddleX = (ELEMENT_WIDTH * NR_OF_COLUMNS) / 2
+        var gamePosMiddleY = (ELEMENT_HEIGHT * NR_OF_ROWS) / 2
+        
+        var xPosition = Int(middle!.x) - gamePosMiddleX //125/2
+        var yPosition = Int(middle!.y) + gamePosMiddleY //667
         var rows = NR_OF_ROWS
         var columns = NR_OF_COLUMNS
         matrix.initiateElements()
         
+        print("start positions")
+        print(xPosition)
+        print(yPosition)
         var tempPosY = 0
         for row in 0..<rows{
             var tempPosX = 0
@@ -261,9 +268,9 @@ class GameScene: SKScene {
                 var element = matrix.getElement(row: row, column: column)
                 if(element != nil){
                     let background = element!.sprite
-                    background.anchorPoint = CGPoint(x: 0, y: 1) // 0, 1
+                    //background.anchorPoint = CGPoint(x: 0, y: 1) // 0, 1
                     background.size = CGSize(width: CGFloat(ELEMENT_WIDTH), height: CGFloat(ELEMENT_HEIGHT))
-                    background.position = CGPoint(x:xPosition + tempPosX, y:yPosition + tempPosY);
+                    background.position = CGPoint(x:xPosition + tempPosX + 25, y:yPosition + tempPosY - 25);
                     self.addChild(background)
                 }
                 tempPosX = tempPosX + 50
@@ -273,17 +280,41 @@ class GameScene: SKScene {
         }
     }
     
+    
     func convertPoint(_ point: CGPoint) -> (success: Bool, row: Int, column: Int)
     {
+        var middle = self.view?.center;
+        
+        var gamePosMiddleX = (ELEMENT_WIDTH * NR_OF_COLUMNS) / 2
+        var gamePosMiddleY = (ELEMENT_HEIGHT * NR_OF_ROWS) / 2
+        
+        var xPosition = Int(middle!.x) - gamePosMiddleX //125/2
+        var yPosition = Int(middle!.y) + gamePosMiddleY
+        
         let TileHeight = CGFloat(50)
         let TileWidth = CGFloat(50)
-        if point.x >= 0 && point.x < CGFloat(NR_OF_ROWS)*TileWidth &&
-            point.y >= 0 && point.y < CGFloat(NR_OF_COLUMNS)*TileHeight{
-            return (true, Int(point.y / TileHeight), Int(point.x / TileWidth))
+        if point.x >= CGFloat(87) && point.x < CGFloat(87) + CGFloat(NR_OF_ROWS)*TileWidth &&
+            point.y >= CGFloat(235) && point.y < CGFloat(235) + CGFloat(NR_OF_COLUMNS)*TileHeight{
+            print("koordinater")
+            print(point.y/TileHeight)
+            print(point.x/TileWidth)
+            return (true, Int((point.y - 235)/TileHeight), Int((point.x - 87)/TileWidth))
             
         } else{
-            return (false, 0, 0)  // invalid location
             print("false")
+            return (false, 0, 0)  // invalid location
+        }
+    }
+    
+    func convPoint(_ fingerPoint: CGPoint) -> (success: Bool, row: Int, column: Int){
+        let tHeight = CGFloat(ELEMENT_WIDTH)
+        let tWidth = CGFloat(ELEMENT_HEIGHT)
+        if(fingerPoint.x >= 0 && fingerPoint.x < CGFloat(NR_OF_ROWS)*tWidth &&
+            fingerPoint.y >= 0 && fingerPoint.y < CGFloat(NR_OF_COLUMNS)*tHeight){
+            return (true, Int(fingerPoint.y / tHeight - 25), Int(fingerPoint.x / tWidth))
+        }
+        else{
+            return (false, -1, -1)
         }
     }
     
