@@ -10,7 +10,6 @@
 		0B321D721DE2254300704BF9 /* HighscoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B321D711DE2254300704BF9 /* HighscoreViewController.swift */; };
 		0B321D741DE2261B00704BF9 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B321D731DE2261B00704BF9 /* Score.swift */; };
 		0B321D761DE226E000704BF9 /* Highscore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B321D751DE226E000704BF9 /* Highscore.swift */; };
-		0B321D781DE3852400704BF9 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B321D771DE3852400704BF9 /* IndexViewController.swift */; };
 		0B41298B1DF479F300DABE91 /* Picuzzle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B4129891DF479F300DABE91 /* Picuzzle.xcdatamodeld */; };
 		0B41299A1DF489F200DABE91 /* AAAScore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4129981DF489F200DABE91 /* AAAScore+CoreDataClass.swift */; };
 		0B41299B1DF489F200DABE91 /* AAAScore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4129991DF489F200DABE91 /* AAAScore+CoreDataProperties.swift */; };
@@ -26,6 +25,10 @@
 		0B78AC271DEC468C00FA719D /* MultiplayerLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC261DEC468C00FA719D /* MultiplayerLocalViewController.swift */; };
 		0B78AC291DEC477F00FA719D /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC281DEC477F00FA719D /* LoadingScreenViewController.swift */; };
 		0B78AC2B1DEC4BBC00FA719D /* FinishedScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */; };
+		A313BECB1DF5EFF000AFCD09 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A313BECA1DF5EFF000AFCD09 /* background.png */; };
+		A313BECE1DF5F7C500AFCD09 /* VCR-OSD-MONO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A313BECD1DF5F73300AFCD09 /* VCR-OSD-MONO.ttf */; };
+		A313BED31DF6060B00AFCD09 /* clock-badge.png in Resources */ = {isa = PBXBuildFile; fileRef = A313BED11DF6060B00AFCD09 /* clock-badge.png */; };
+		A313BED41DF6060B00AFCD09 /* sword-badge.png in Resources */ = {isa = PBXBuildFile; fileRef = A313BED21DF6060B00AFCD09 /* sword-badge.png */; };
 		A38B4F021DE22B980016B745 /* Grab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B4F011DE22B980016B745 /* Grab.swift */; };
 		A3A83B491DE62F6700382D43 /* GMScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A83B481DE62F6700382D43 /* GMScene.swift */; };
 		A3C1FB081DDE0F9E00D3AD8F /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1FB071DDE0F9E00D3AD8F /* Matrix.swift */; };
@@ -46,7 +49,6 @@
 		0B321D711DE2254300704BF9 /* HighscoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreViewController.swift; sourceTree = "<group>"; };
 		0B321D731DE2261B00704BF9 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		0B321D751DE226E000704BF9 /* Highscore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highscore.swift; sourceTree = "<group>"; };
-		0B321D771DE3852400704BF9 /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		0B41298A1DF479F300DABE91 /* Picuzzle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Picuzzle.xcdatamodel; sourceTree = "<group>"; };
 		0B4129981DF489F200DABE91 /* AAAScore+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AAAScore+CoreDataClass.swift"; path = "../AAAScore+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0B4129991DF489F200DABE91 /* AAAScore+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AAAScore+CoreDataProperties.swift"; path = "../AAAScore+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -64,6 +66,10 @@
 		0B78AC261DEC468C00FA719D /* MultiplayerLocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplayerLocalViewController.swift; sourceTree = "<group>"; };
 		0B78AC281DEC477F00FA719D /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedScreenViewController.swift; sourceTree = "<group>"; };
+		A313BECA1DF5EFF000AFCD09 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		A313BECD1DF5F73300AFCD09 /* VCR-OSD-MONO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VCR-OSD-MONO.ttf"; sourceTree = "<group>"; };
+		A313BED11DF6060B00AFCD09 /* clock-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-badge.png"; sourceTree = "<group>"; };
+		A313BED21DF6060B00AFCD09 /* sword-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sword-badge.png"; sourceTree = "<group>"; };
 		A38B4F011DE22B980016B745 /* Grab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grab.swift; sourceTree = "<group>"; };
 		A3A83B481DE62F6700382D43 /* GMScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMScene.swift; sourceTree = "<group>"; };
 		A3C1FB071DDE0F9E00D3AD8F /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 				0B4129961DF4898B00DABE91 /* model */,
 				A3C1FB0B1DDE12BD00D3AD8F /* images */,
 				0B6577A41DDDDF7600DFE24E /* AppDelegate.swift */,
+				A313BECF1DF5FC0400AFCD09 /* Fonts */,
 				0B6577AA1DDDDF7600DFE24E /* GameScene.swift */,
 				A3A83B481DE62F6700382D43 /* GMScene.swift */,
 				A3C1FB111DDE181200D3AD8F /* IndexViewController.swift */,
@@ -155,9 +162,36 @@
 			path = picuzzle;
 			sourceTree = "<group>";
 		};
+		A313BEC91DF5EFE200AFCD09 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A313BECA1DF5EFF000AFCD09 /* background.png */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		A313BECF1DF5FC0400AFCD09 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A313BECD1DF5F73300AFCD09 /* VCR-OSD-MONO.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		A313BED01DF6060000AFCD09 /* badges */ = {
+			isa = PBXGroup;
+			children = (
+				A313BED11DF6060B00AFCD09 /* clock-badge.png */,
+				A313BED21DF6060B00AFCD09 /* sword-badge.png */,
+			);
+			name = badges;
+			sourceTree = "<group>";
+		};
 		A3C1FB0B1DDE12BD00D3AD8F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A313BED01DF6060000AFCD09 /* badges */,
+				A313BEC91DF5EFE200AFCD09 /* UI */,
 				A3C1FB0C1DDE12C700D3AD8F /* pics */,
 			);
 			name = images;
@@ -239,7 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3C1FB1D1DDE243400D3AD8F /* green.png in Resources */,
+				A313BED41DF6060B00AFCD09 /* sword-badge.png in Resources */,
 				A3C1FB221DDE243400D3AD8F /* yellow.png in Resources */,
+				A313BECE1DF5F7C500AFCD09 /* VCR-OSD-MONO.ttf in Resources */,
+				A313BED31DF6060B00AFCD09 /* clock-badge.png in Resources */,
+				A313BECB1DF5EFF000AFCD09 /* background.png in Resources */,
 				A3C1FB1E1DDE243400D3AD8F /* orange.png in Resources */,
 				A3C1FB1F1DDE243400D3AD8F /* pink.png in Resources */,
 				A3C1FB201DDE243400D3AD8F /* red.png in Resources */,
