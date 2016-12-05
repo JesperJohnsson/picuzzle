@@ -12,6 +12,10 @@ class Highscore {
     private var scores = [Score]()
     private let maxNumberOfScores = 5
     
+    func clearScores() {
+        scores = [Score]()
+    }
+    
     func addScore(score: Score) {
         if scores.count == 0 || scores.count < maxNumberOfScores {
             scores.append(score)
@@ -25,5 +29,13 @@ class Highscore {
         }
         
         scores = scores.sorted(by: {$0.value > $1.value})
+    }
+    
+    func getScore(index: Int) -> Score {
+        return scores[index]
+    }
+    
+    func getCount() -> Int {
+        return scores.count
     }
 }

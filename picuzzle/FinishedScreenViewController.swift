@@ -19,15 +19,10 @@ class FinishedScreenViewController: UIViewController {
         print("FINISHED " + String(points))
         pointLbl.text = String(points)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func backBtnPressed(_ sender: Any) {
+        //Clears all of the pre existing views so they do not occupy memory and cause problems
+        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
-    */
 
 }

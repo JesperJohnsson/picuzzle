@@ -9,17 +9,27 @@
 import UIKit
 
 class MultiplayerLocalViewController: UIViewController {
+    var players: [Player] = []
 
+    @IBOutlet weak var player1Name: UITextField!
+    @IBOutlet weak var player2Name: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
 
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-
+    
+    @IBAction func startGameBtnPressed(_ sender: Any) {
+        players.append(Player(name: player1Name.text!))
+        players.append(Player(name: player2Name.text!))
+        
+        performSegue(withIdentifier: "GameViewController", sender: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

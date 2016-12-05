@@ -18,4 +18,8 @@ class Score {
             _value = newValue
         }
     }
+    
+    init(value: Int) {
+        _value = value
+    }
 }
