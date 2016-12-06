@@ -8,19 +8,23 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
         let pageController = UIPageControl.appearance()
         pageController.pageIndicatorTintColor = UIColor.lightGray
         pageController.currentPageIndicatorTintColor = UIColor.black
         pageController.backgroundColor = UIColor.white
+        
+        //UINavigationBar.appearance().tintColor = UIColor.white
+        
+        FIRApp.configure()
         
         return true
     }
@@ -72,6 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
 }
 
 let ad = UIApplication.shared.delegate as! AppDelegate

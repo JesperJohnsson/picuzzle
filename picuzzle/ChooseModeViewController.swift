@@ -27,6 +27,17 @@ class ChooseModeViewController: UIViewController {
         multiplayerView.layer.cornerRadius = 10
         onlineBtn.layer.cornerRadius = 10
         localBtn.layer.cornerRadius = 10
+        
+        showNavigation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showNavigation()
+    }
+    
+    func showNavigation() {
+        self.navigationController?.navigationBar.isHidden = false
     }
 
     @IBAction func backBtnPressed(_ sender: Any) {

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 class Score {
     private var _value: Int!
@@ -21,5 +22,17 @@ class Score {
     
     init(value: Int) {
         _value = value
+    }
+    
+    init(snapshot: FIRDataSnapshot) {
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        _value = snapshotValue["value"] as! Int
+        
+    }
+    
+    func toAnyObject() -> Any {
+        return [
+            "value": value
+        ]
     }
 }

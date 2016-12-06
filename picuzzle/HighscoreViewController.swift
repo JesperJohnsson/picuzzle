@@ -10,6 +10,7 @@ import UIKit
 
 class HighscoreViewController: UIViewController, UIPageViewControllerDataSource {
     
+    @IBOutlet weak var tableView: UIView!
     var pageViewController: UIPageViewController!
     var pageTitles: NSArray!
     var highscores: NSArray!
@@ -34,8 +35,18 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMove(toParentViewController: self)
-        
+    
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showNavigation()
+    }
+    
+    func showNavigation() {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
 
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -92,6 +103,19 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         return 0
     }
     
+    @IBAction func indexChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.pageViewController.view.isHidden = false
+            tableView.isHidden = true
+        case 1:
+            self.pageViewController.view.isHidden = true
+            tableView.isHidden = false
+        default:
+            break
+        }
+        
+    }
     
     
     

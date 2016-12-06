@@ -12,12 +12,21 @@ class LoadingScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideNavigation()
         
     }
 
     @IBAction func abortBtnPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideNavigation()
+    }
+    
+    func hideNavigation() {
+        self.navigationController?.navigationBar.isHidden = true
     }
     /*
     // MARK: - Navigation

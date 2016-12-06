@@ -10,6 +10,8 @@ import UIKit
 import SpriteKit
 import GameplayKit
 import CoreData
+import Firebase
+import FirebaseDatabase
 
 class GameViewController: UIViewController {
     
@@ -25,9 +27,11 @@ class GameViewController: UIViewController {
 
     var gameboardScene: GameScene!
     var gameoverScene: GMScene!
+    let ref = FIRDatabase.database().reference(withPath: "scores")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideNavigation()
     
         let skView = view as! SKView
         
@@ -52,9 +56,24 @@ class GameViewController: UIViewController {
         print(String(describing: s.name))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideNavigation()
+    }
+    
+    func hideNavigation() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     func gameOverPoints(_ points: Int){
         /* Function for future use? */
         print("callback")
+        
+        var score = Score(value: points)
+        
+        let scoreRef = self.ref.child("kallebanan")
+        scoreRef.setValue(score.toAnyObject())
+        
         
         let finalScore = NSEntityDescription.insertNewObject(forEntityName: "AAAScore", into: context) as! AAAScore
         finalScore.setValue(points, forKey: "value")
