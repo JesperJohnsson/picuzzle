@@ -27,10 +27,11 @@ class ChooseModeViewController: UIViewController {
         multiplayerView.layer.cornerRadius = 10
         onlineBtn.layer.cornerRadius = 10
         localBtn.layer.cornerRadius = 10
+        self.initiate()
     }
     
     func initiate(){
-    
+         self.view.backgroundColor = BG_GRAY
     }
 
     @IBAction func backBtnPressed(_ sender: Any) {

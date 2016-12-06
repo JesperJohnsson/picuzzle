@@ -47,6 +47,8 @@
 		A3D51B091DF6CEBA000F0182 /* sword-badge.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B061DF6CEBA000F0182 /* sword-badge.png */; };
 		A3D51B0B1DF6D084000F0182 /* fot-long.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B0A1DF6D084000F0182 /* fot-long.png */; };
 		A3D51B0D1DF6D242000F0182 /* foot1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B0C1DF6D242000F0182 /* foot1.png */; };
+		A3D51B111DF6DE55000F0182 /* timeAttack-button.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B101DF6DE55000F0182 /* timeAttack-button.png */; };
+		A3D51B131DF6E0BE000F0182 /* timeTrial-button.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B121DF6E0BE000F0182 /* timeTrial-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		A3D51B061DF6CEBA000F0182 /* sword-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sword-badge.png"; sourceTree = "<group>"; };
 		A3D51B0A1DF6D084000F0182 /* fot-long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fot-long.png"; sourceTree = "<group>"; };
 		A3D51B0C1DF6D242000F0182 /* foot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foot1.png; sourceTree = "<group>"; };
+		A3D51B101DF6DE55000F0182 /* timeAttack-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeAttack-button.png"; sourceTree = "<group>"; };
+		A3D51B121DF6E0BE000F0182 /* timeTrial-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeTrial-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 		A313BEC91DF5EFE200AFCD09 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A3D51B121DF6E0BE000F0182 /* timeTrial-button.png */,
+				A3D51B101DF6DE55000F0182 /* timeAttack-button.png */,
 				A3D51B0C1DF6D242000F0182 /* foot1.png */,
 				A3D51B0A1DF6D084000F0182 /* fot-long.png */,
 				A313BECA1DF5EFF000AFCD09 /* background.png */,
@@ -294,12 +300,14 @@
 			files = (
 				A3D51B081DF6CEBA000F0182 /* multiplayer-badge.png in Resources */,
 				A3D51B0D1DF6D242000F0182 /* foot1.png in Resources */,
+				A3D51B131DF6E0BE000F0182 /* timeTrial-button.png in Resources */,
 				A3C1FB1D1DDE243400D3AD8F /* green.png in Resources */,
 				A3C1FB221DDE243400D3AD8F /* yellow.png in Resources */,
 				A313BECE1DF5F7C500AFCD09 /* VCR-OSD-MONO.ttf in Resources */,
 				A3D51B071DF6CEBA000F0182 /* clock-badge.png in Resources */,
 				A313BECB1DF5EFF000AFCD09 /* background.png in Resources */,
 				A3C1FB1E1DDE243400D3AD8F /* orange.png in Resources */,
+				A3D51B111DF6DE55000F0182 /* timeAttack-button.png in Resources */,
 				A3C1FB1F1DDE243400D3AD8F /* pink.png in Resources */,
 				A3C1FB201DDE243400D3AD8F /* red.png in Resources */,
 				A3C1FB101DDE132800D3AD8F /* example.png in Resources */,

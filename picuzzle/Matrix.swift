@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 let NR_OF_COLUMNS = 4
 let NR_OF_ROWS = 4
 let ELEMENT_WIDTH = 50
 let ELEMENT_HEIGHT = 50
+let BG_GRAY = UIColor(red: 239.0 / 255, green: 239.0 / 255, blue: 239.0 / 255, alpha: 1.0)
 
 class Matrix{
     var matrix: [[Element?]]

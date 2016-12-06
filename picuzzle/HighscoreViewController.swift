@@ -52,7 +52,7 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         self.view.insertSubview(backgroundImage, at: 0)
         */
         
-        self.view.backgroundColor = UIColor(red: 239.0 / 255, green: 239.0 / 255, blue: 239.0 / 255, alpha: 1.0)
+        self.view.backgroundColor = BG_GRAY
     }
     
     func changeBadge(atIndex: Int){
@@ -88,6 +88,8 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         let vc: ContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "ContentViewController") as! ContentViewController
         
         vc.titleText = self.pageTitles[index] as! String
+        print("title text")
+        print(vc.titleText)
         vc.highscore = self.highscores[index] as! Highscore
         vc.pageIndex = index
         
