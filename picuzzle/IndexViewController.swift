@@ -12,7 +12,7 @@ class IndexViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        if Reachability.isConnectedToNetwork() == true {
+        if Reachability.isConnectedToNetwork() {
             print("Internet connection OK")
         } else {
             print("Internet connection FAILED")

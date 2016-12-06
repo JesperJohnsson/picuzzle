@@ -45,6 +45,14 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         imageBadge.image = UIImage(named:"sword-badge")
         self.view.addSubview(imageBadge)
         self.view.sendSubview(toBack: imageBadge)
+        
+        /*
+        let backgroundImage = UIImageView(frame:CGRect(x: 0, y: self.view.frame.maxY - 100, width: 750, height: 100))
+        backgroundImage.image = UIImage(named: "foot1.png")
+        self.view.insertSubview(backgroundImage, at: 0)
+        */
+        
+        self.view.backgroundColor = UIColor(red: 239.0 / 255, green: 239.0 / 255, blue: 239.0 / 255, alpha: 1.0)
     }
     
     func changeBadge(atIndex: Int){
@@ -57,7 +65,7 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
             imageBadge.image = UIImage(named:"clock-badge")
             break
         case 2:
-            imageBadge.image = UIImage(named:"sword-badge")
+            imageBadge.image = UIImage(named:"multiplayer-badge")
             break
         default:
             imageBadge.image = UIImage(named:"sword-badge")

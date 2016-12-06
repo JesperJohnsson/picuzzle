@@ -27,8 +27,6 @@
 		0B78AC2B1DEC4BBC00FA719D /* FinishedScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */; };
 		A313BECB1DF5EFF000AFCD09 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A313BECA1DF5EFF000AFCD09 /* background.png */; };
 		A313BECE1DF5F7C500AFCD09 /* VCR-OSD-MONO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A313BECD1DF5F73300AFCD09 /* VCR-OSD-MONO.ttf */; };
-		A313BED31DF6060B00AFCD09 /* clock-badge.png in Resources */ = {isa = PBXBuildFile; fileRef = A313BED11DF6060B00AFCD09 /* clock-badge.png */; };
-		A313BED41DF6060B00AFCD09 /* sword-badge.png in Resources */ = {isa = PBXBuildFile; fileRef = A313BED21DF6060B00AFCD09 /* sword-badge.png */; };
 		A38B4F021DE22B980016B745 /* Grab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B4F011DE22B980016B745 /* Grab.swift */; };
 		A3A83B491DE62F6700382D43 /* GMScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A83B481DE62F6700382D43 /* GMScene.swift */; };
 		A3C1FB081DDE0F9E00D3AD8F /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1FB071DDE0F9E00D3AD8F /* Matrix.swift */; };
@@ -44,6 +42,11 @@
 		A3C1FB211DDE243400D3AD8F /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C1FB191DDE243400D3AD8F /* white.png */; };
 		A3C1FB221DDE243400D3AD8F /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C1FB1A1DDE243400D3AD8F /* yellow.png */; };
 		A3D51B031DF6B9F0000F0182 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D51B021DF6B9F0000F0182 /* Reachability.swift */; };
+		A3D51B071DF6CEBA000F0182 /* clock-badge.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B041DF6CEBA000F0182 /* clock-badge.png */; };
+		A3D51B081DF6CEBA000F0182 /* multiplayer-badge.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B051DF6CEBA000F0182 /* multiplayer-badge.png */; };
+		A3D51B091DF6CEBA000F0182 /* sword-badge.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B061DF6CEBA000F0182 /* sword-badge.png */; };
+		A3D51B0B1DF6D084000F0182 /* fot-long.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B0A1DF6D084000F0182 /* fot-long.png */; };
+		A3D51B0D1DF6D242000F0182 /* foot1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B0C1DF6D242000F0182 /* foot1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,8 +72,6 @@
 		0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedScreenViewController.swift; sourceTree = "<group>"; };
 		A313BECA1DF5EFF000AFCD09 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		A313BECD1DF5F73300AFCD09 /* VCR-OSD-MONO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VCR-OSD-MONO.ttf"; sourceTree = "<group>"; };
-		A313BED11DF6060B00AFCD09 /* clock-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-badge.png"; sourceTree = "<group>"; };
-		A313BED21DF6060B00AFCD09 /* sword-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sword-badge.png"; sourceTree = "<group>"; };
 		A38B4F011DE22B980016B745 /* Grab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grab.swift; sourceTree = "<group>"; };
 		A3A83B481DE62F6700382D43 /* GMScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMScene.swift; sourceTree = "<group>"; };
 		A3C1FB071DDE0F9E00D3AD8F /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
@@ -86,6 +87,11 @@
 		A3C1FB191DDE243400D3AD8F /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		A3C1FB1A1DDE243400D3AD8F /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		A3D51B021DF6B9F0000F0182 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		A3D51B041DF6CEBA000F0182 /* clock-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-badge.png"; sourceTree = "<group>"; };
+		A3D51B051DF6CEBA000F0182 /* multiplayer-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiplayer-badge.png"; sourceTree = "<group>"; };
+		A3D51B061DF6CEBA000F0182 /* sword-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sword-badge.png"; sourceTree = "<group>"; };
+		A3D51B0A1DF6D084000F0182 /* fot-long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fot-long.png"; sourceTree = "<group>"; };
+		A3D51B0C1DF6D242000F0182 /* foot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foot1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,8 @@
 		A313BEC91DF5EFE200AFCD09 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A3D51B0C1DF6D242000F0182 /* foot1.png */,
+				A3D51B0A1DF6D084000F0182 /* fot-long.png */,
 				A313BECA1DF5EFF000AFCD09 /* background.png */,
 			);
 			name = UI;
@@ -184,8 +192,9 @@
 		A313BED01DF6060000AFCD09 /* badges */ = {
 			isa = PBXGroup;
 			children = (
-				A313BED11DF6060B00AFCD09 /* clock-badge.png */,
-				A313BED21DF6060B00AFCD09 /* sword-badge.png */,
+				A3D51B041DF6CEBA000F0182 /* clock-badge.png */,
+				A3D51B051DF6CEBA000F0182 /* multiplayer-badge.png */,
+				A3D51B061DF6CEBA000F0182 /* sword-badge.png */,
 			);
 			name = badges;
 			sourceTree = "<group>";
@@ -283,11 +292,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D51B081DF6CEBA000F0182 /* multiplayer-badge.png in Resources */,
+				A3D51B0D1DF6D242000F0182 /* foot1.png in Resources */,
 				A3C1FB1D1DDE243400D3AD8F /* green.png in Resources */,
-				A313BED41DF6060B00AFCD09 /* sword-badge.png in Resources */,
 				A3C1FB221DDE243400D3AD8F /* yellow.png in Resources */,
 				A313BECE1DF5F7C500AFCD09 /* VCR-OSD-MONO.ttf in Resources */,
-				A313BED31DF6060B00AFCD09 /* clock-badge.png in Resources */,
+				A3D51B071DF6CEBA000F0182 /* clock-badge.png in Resources */,
 				A313BECB1DF5EFF000AFCD09 /* background.png in Resources */,
 				A3C1FB1E1DDE243400D3AD8F /* orange.png in Resources */,
 				A3C1FB1F1DDE243400D3AD8F /* pink.png in Resources */,
@@ -299,6 +309,8 @@
 				0B6577B51DDDDF7600DFE24E /* LaunchScreen.storyboard in Resources */,
 				A3C1FB1B1DDE243400D3AD8F /* black.png in Resources */,
 				A3C1FB1C1DDE243400D3AD8F /* blue.png in Resources */,
+				A3D51B091DF6CEBA000F0182 /* sword-badge.png in Resources */,
+				A3D51B0B1DF6D084000F0182 /* fot-long.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
