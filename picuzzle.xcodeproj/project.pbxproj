@@ -43,6 +43,7 @@
 		A3C1FB201DDE243400D3AD8F /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C1FB181DDE243400D3AD8F /* red.png */; };
 		A3C1FB211DDE243400D3AD8F /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C1FB191DDE243400D3AD8F /* white.png */; };
 		A3C1FB221DDE243400D3AD8F /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C1FB1A1DDE243400D3AD8F /* yellow.png */; };
+		A3D51B031DF6B9F0000F0182 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D51B021DF6B9F0000F0182 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		A3C1FB181DDE243400D3AD8F /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		A3C1FB191DDE243400D3AD8F /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		A3C1FB1A1DDE243400D3AD8F /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
+		A3D51B021DF6B9F0000F0182 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		0B6577A31DDDDF7600DFE24E /* picuzzle */ = {
 			isa = PBXGroup;
 			children = (
+				A3D51B011DF6B9D0000F0182 /* Services */,
 				0B4129961DF4898B00DABE91 /* model */,
 				A3C1FB0B1DDE12BD00D3AD8F /* images */,
 				0B6577A41DDDDF7600DFE24E /* AppDelegate.swift */,
@@ -211,6 +214,14 @@
 				A3C1FB0F1DDE132800D3AD8F /* example.png */,
 			);
 			name = pics;
+			sourceTree = "<group>";
+		};
+		A3D51B011DF6B9D0000F0182 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A3D51B021DF6B9F0000F0182 /* Reachability.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +323,7 @@
 				0B321D761DE226E000704BF9 /* Highscore.swift in Sources */,
 				0B6577A51DDDDF7600DFE24E /* AppDelegate.swift in Sources */,
 				A3C1FB0A1DDE101700D3AD8F /* Element.swift in Sources */,
+				A3D51B031DF6B9F0000F0182 /* Reachability.swift in Sources */,
 				A3C1FB121DDE181200D3AD8F /* IndexViewController.swift in Sources */,
 				0B321D721DE2254300704BF9 /* HighscoreViewController.swift in Sources */,
 				0B78AC291DEC477F00FA719D /* LoadingScreenViewController.swift in Sources */,

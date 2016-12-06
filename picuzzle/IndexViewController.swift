@@ -11,6 +11,13 @@ class IndexViewController: UIViewController {
         self.view.insertSubview(backgroundImage, at: 0)
 
         // Do any additional setup after loading the view.
+        
+        if Reachability.isConnectedToNetwork() == true {
+            print("Internet connection OK")
+        } else {
+            print("Internet connection FAILED")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
