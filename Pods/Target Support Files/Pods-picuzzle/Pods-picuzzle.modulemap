@@ -1,6 +1,0 @@
-framework module Pods_picuzzle {
-  umbrella header "Pods-picuzzle-umbrella.h"
-
-  export *
-  module * { export * }
-}
