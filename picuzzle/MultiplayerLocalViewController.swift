@@ -19,10 +19,6 @@ class MultiplayerLocalViewController: UIViewController {
         
     }
 
-    @IBAction func backBtnPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func startGameBtnPressed(_ sender: Any) {
         players.append(Player(name: player1Name.text!))
         players.append(Player(name: player2Name.text!))

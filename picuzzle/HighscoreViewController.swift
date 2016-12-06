@@ -41,6 +41,11 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         self.pageViewController.didMove(toParentViewController: self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showNavigation()
+    }
+    
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -96,5 +101,9 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
+    }
+    
+    func showNavigation() {
+        self.navigationController?.navigationBar.isHidden = false
     }
 }

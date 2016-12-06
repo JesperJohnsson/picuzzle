@@ -133,7 +133,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ds3-cI-pje"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U8v-3W-8Gc">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -154,14 +154,14 @@
                         <viewControllerLayoutGuide type="bottom" id="K6e-43-zVf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MT6-Iw-St6">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6q-5W-5Tv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FHn-fJ-tIP">
-                                        <rect key="frame" x="20" y="240" width="335" height="124"/>
+                                        <rect key="frame" x="20" y="272" width="335" height="124"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="K2M-WO-RBo">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="74"/>
@@ -252,7 +252,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7QA-s1-5gd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ikq-zh-4W9">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKY-RO-r6I">
@@ -317,11 +317,11 @@
                         <viewControllerLayoutGuide type="bottom" id="jEj-yq-09K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gfk-ea-HDo">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Cxi-Ul-CjS">
-                                <rect key="frame" x="16" y="44" width="343" height="313"/>
+                                <rect key="frame" x="16" y="108" width="343" height="313"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dwu-Gu-CTf">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="144"/>
@@ -459,7 +459,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zRL-j9-csZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L1E-oM-thL">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="efs-bC-byi">
@@ -538,7 +538,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -559,14 +559,14 @@
                         <viewControllerLayoutGuide type="bottom" id="R72-ll-3sd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z5W-0v-GQK">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-75-r63">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3H1-rv-cre">
-                                        <rect key="frame" x="20" y="239" width="335" height="124"/>
+                                        <rect key="frame" x="20" y="271" width="335" height="124"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="n9p-JD-TdR">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="74"/>
@@ -637,7 +637,7 @@
         <image name="sword-badge.png" width="308" height="308"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fVG-ha-fR0"/>
+        <segue reference="4Dc-Qn-ztj"/>
         <segue reference="Z81-3m-dum"/>
     </inferredMetricsTieBreakers>
 </document>
