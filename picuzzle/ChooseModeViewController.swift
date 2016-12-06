@@ -33,11 +33,6 @@ class ChooseModeViewController: UIViewController {
     
     }
 
-    @IBAction func backBtnPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
     @IBAction func timeAttackBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "GameViewController", sender: "Time Attack")
     }
@@ -46,7 +41,6 @@ class ChooseModeViewController: UIViewController {
         performSegue(withIdentifier: "GameViewController", sender: "Time Trial")
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? GameViewController {
             
@@ -54,6 +48,15 @@ class ChooseModeViewController: UIViewController {
                 destination.selectedMode = mode
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showNavigation()
+    }
+    
+    func showNavigation() {
+        self.navigationController?.navigationBar.isHidden = false
     }
     
 

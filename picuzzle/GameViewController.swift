@@ -52,6 +52,15 @@ class GameViewController: UIViewController {
         print(String(describing: s.name))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideNavigation()
+    }
+    
+    func hideNavigation() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     func gameOverPoints(_ points: Int){
         /* Function for future use? */
         print("callback")
