@@ -47,6 +47,7 @@
 		A3D51B091DF6CEBA000F0182 /* sword-badge.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B061DF6CEBA000F0182 /* sword-badge.png */; };
 		A3D51B0B1DF6D084000F0182 /* fot-long.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B0A1DF6D084000F0182 /* fot-long.png */; };
 		A3D51B0D1DF6D242000F0182 /* foot1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B0C1DF6D242000F0182 /* foot1.png */; };
+		B7A4A51B1DF6E81700398E10 /* multiConnection1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A4A51A1DF6E81700398E10 /* multiConnection1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		A3D51B061DF6CEBA000F0182 /* sword-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sword-badge.png"; sourceTree = "<group>"; };
 		A3D51B0A1DF6D084000F0182 /* fot-long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fot-long.png"; sourceTree = "<group>"; };
 		A3D51B0C1DF6D242000F0182 /* foot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foot1.png; sourceTree = "<group>"; };
+		B7A4A51A1DF6E81700398E10 /* multiConnection1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = multiConnection1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				A3C1FB091DDE101700D3AD8F /* Element.swift */,
 				A38B4F011DE22B980016B745 /* Grab.swift */,
 				0B321D711DE2254300704BF9 /* HighscoreViewController.swift */,
+				B7A4A51A1DF6E81700398E10 /* multiConnection1ViewController.swift */,
 				0B321D731DE2261B00704BF9 /* Score.swift */,
 				0B321D751DE226E000704BF9 /* Highscore.swift */,
 				0B78AC241DEC2F7F00FA719D /* ChooseModeViewController.swift */,
@@ -331,6 +334,7 @@
 				0B71B5461DF1DC0400F399A4 /* ContentViewController.swift in Sources */,
 				0B41299A1DF489F200DABE91 /* AAAScore+CoreDataClass.swift in Sources */,
 				0B6577AD1DDDDF7600DFE24E /* GameViewController.swift in Sources */,
+				B7A4A51B1DF6E81700398E10 /* multiConnection1ViewController.swift in Sources */,
 				0B4DC0111DF0815100B96138 /* Player.swift in Sources */,
 				0B321D761DE226E000704BF9 /* Highscore.swift in Sources */,
 				0B6577A51DDDDF7600DFE24E /* AppDelegate.swift in Sources */,
