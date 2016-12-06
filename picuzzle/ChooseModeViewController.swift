@@ -28,6 +28,10 @@ class ChooseModeViewController: UIViewController {
         onlineBtn.layer.cornerRadius = 10
         localBtn.layer.cornerRadius = 10
     }
+    
+    func initiate(){
+    
+    }
 
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
