@@ -13,9 +13,12 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
     var pageViewController: UIPageViewController!
     var pageTitles: NSArray!
     var highscores: NSArray!
+    var imageBadge: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.imageBadge = UIImageView()
         
         self.pageTitles = NSArray(objects: "Time Attack", "Time Trial", "Multiplayer")
         self.highscores = NSArray(objects: Highscore(), Highscore(), Highscore())
@@ -29,12 +32,45 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         
         self.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .forward, animated: true, completion: nil)
         
-        self.pageViewController.view.frame = CGRect(origin: CGPoint(x: 0,y: 120), size: CGSize(width: self.view.frame.width, height: self.view.frame.height - 300))
+        self.pageViewController.view.frame = CGRect(origin: CGPoint(x: 0,y: 60), size: CGSize(width: self.view.frame.width, height: self.view.frame.height - 60))
         
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMove(toParentViewController: self)
+        self.initiate()
+    }
+    
+    func initiate(){
+        imageBadge = UIImageView(frame:CGRect(x: self.view.frame.midX - 37, y: 120, width: 75, height: 75))
+        imageBadge.image = UIImage(named:"sword-badge")
+        self.view.addSubview(imageBadge)
+        self.view.sendSubview(toBack: imageBadge)
         
+        /*
+        let backgroundImage = UIImageView(frame:CGRect(x: 0, y: self.view.frame.maxY - 100, width: 750, height: 100))
+        backgroundImage.image = UIImage(named: "foot1.png")
+        self.view.insertSubview(backgroundImage, at: 0)
+        */
+        
+        self.view.backgroundColor = UIColor(red: 239.0 / 255, green: 239.0 / 255, blue: 239.0 / 255, alpha: 1.0)
+    }
+    
+    func changeBadge(atIndex: Int){
+        print(atIndex)
+        switch(atIndex){
+        case 0:
+            imageBadge.image = UIImage(named:"sword-badge")
+            break
+        case 1:
+            imageBadge.image = UIImage(named:"clock-badge")
+            break
+        case 2:
+            imageBadge.image = UIImage(named:"multiplayer-badge")
+            break
+        default:
+            imageBadge.image = UIImage(named:"sword-badge")
+            break
+        }
     }
 
     @IBAction func backBtnPressed(_ sender: Any) {
@@ -42,6 +78,9 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
     }
     
     func viewControllerAtIndex(index: Int) -> ContentViewController {
+        
+        self.changeBadge(atIndex: index)
+        
         if ((self.pageTitles.count == 0) || (index >= self.pageTitles.count)) {
             return ContentViewController()
         }
@@ -56,6 +95,7 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        
         let vc = viewController as! ContentViewController
         var index = vc.pageIndex as Int
         

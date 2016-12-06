@@ -21,6 +21,9 @@ class ContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view?.backgroundColor = UIColor(white: 1, alpha: 0)
+        //self.view?.backgroundColor = UIColor.brown
+        
         let scoresFetch = NSFetchRequest<AAAScore>(entityName: "AAAScore")
         let predicate = NSPredicate(format: "type = %@", self.titleText)
         scoresFetch.predicate = predicate
@@ -30,7 +33,7 @@ class ContentViewController: UIViewController {
             self.highscore.clearScores()
             
             for s in 0..<fetchedScores.count {
-                print(fetchedScores[s].value)
+                //print(fetchedScores[s].value)
                 
                 self.highscore.addScore(score: Score(value: Int(fetchedScores[s].value)))
             }
@@ -39,8 +42,9 @@ class ContentViewController: UIViewController {
             
             for i in 0..<self.highscore.getCount() {
                 self.highscoreList[i].text = "\(i + 1). " + String(self.highscore.getScore(index: i).value) + "p"
-                print(self.highscore.getScore(index: i).value)
+                //print(self.highscore.getScore(index: i).value)
             }
+            
         } catch {
             print(error)
         }
