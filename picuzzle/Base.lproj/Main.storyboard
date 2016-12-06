@@ -21,7 +21,7 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="krq-ny-9rH" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1tp-fn-1N2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3622" y="790"/>
+            <point key="canvasLocation" x="-4369" y="791"/>
         </scene>
         <!--Content View Controller-->
         <scene sceneID="DVQ-Ns-UYw">
@@ -122,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1h-iA-y1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2829.5999999999999" y="788.45577211394311"/>
+            <point key="canvasLocation" x="-3575" y="790"/>
         </scene>
         <!--HIGHSCORE-->
         <scene sceneID="ID1-yK-NLl">
@@ -133,7 +133,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ds3-cI-pje"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U8v-3W-8Gc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -143,7 +143,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRQ-Wn-vmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2103.1999999999998" y="791.15442278860576"/>
+            <point key="canvasLocation" x="-2849" y="793"/>
+        </scene>
+        <!--SETTINGS-->
+        <scene sceneID="doU-At-Oe8">
+            <objects>
+                <viewController id="cxP-i8-LcF" customClass="SettingsViewController" customModule="picuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fz0-K7-IFf"/>
+                        <viewControllerLayoutGuide type="bottom" id="oeV-Mc-2Cn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CNj-VH-Ehe">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="daW-Bh-52o">
+                                <rect key="frame" x="16" y="57" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEndOnExit:" destination="cxP-i8-LcF" eventType="editingDidEndOnExit" id="LPw-w6-dEd"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noq-oV-uNB">
+                                <rect key="frame" x="16" y="28" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SETTINGS" id="RAm-PB-hD6">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Ce8-0u-SUc"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="userNameTxtFld" destination="daW-Bh-52o" id="Dvs-jV-TQD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O96-B7-Vxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2103.1999999999998" y="794.75262368815595"/>
         </scene>
         <!--Loading Screen View Controller-->
         <scene sceneID="Ixv-BX-Adk">
@@ -154,14 +197,14 @@
                         <viewControllerLayoutGuide type="bottom" id="K6e-43-zVf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MT6-Iw-St6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6q-5W-5Tv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FHn-fJ-tIP">
-                                        <rect key="frame" x="20" y="272" width="335" height="124"/>
+                                        <rect key="frame" x="20" y="240" width="335" height="124"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="K2M-WO-RBo">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="74"/>
@@ -252,57 +295,110 @@
                         <viewControllerLayoutGuide type="bottom" id="7QA-s1-5gd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ikq-zh-4W9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKY-RO-r6I">
-                                <rect key="frame" x="32" y="482" width="310" height="41"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5XL-sK-LCe">
+                                <rect key="frame" x="37" y="403" width="300" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKY-RO-r6I">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                        <color key="backgroundColor" red="0.89869350189999997" green="0.4189298749" blue="0.1870625615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="awz-VQ-dx9"/>
+                                            <constraint firstAttribute="width" constant="300" id="ckJ-9v-6H8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="25"/>
+                                        <state key="normal" title="PLAY">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="VRe-6I-NiS" kind="show" id="XOX-0l-Dgg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15A-fz-rbi">
+                                        <rect key="frame" x="0.0" y="50" width="300" height="40"/>
+                                        <color key="backgroundColor" red="0.89869350189999997" green="0.4189298749" blue="0.1870625615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5rS-c0-VJu"/>
+                                            <constraint firstAttribute="width" constant="300" id="QWn-90-2nN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="25"/>
+                                        <state key="normal" title="HIGHSCORE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="h5O-vo-bMW" kind="show" id="J7i-dY-vFa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fT-CV-nJk">
+                                        <rect key="frame" x="0.0" y="100" width="300" height="40"/>
+                                        <color key="backgroundColor" red="0.89869350189999997" green="0.4189298749" blue="0.1870625615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="W6R-Cz-Hnt"/>
+                                            <constraint firstAttribute="width" constant="300" id="kzi-hq-HeL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="25"/>
+                                        <state key="normal" title="SETTINGS">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="cxP-i8-LcF" kind="show" id="sFc-My-zP8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7SW-Yx-qVz">
+                                <rect key="frame" x="33" y="329" width="311" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEndOnExit:" destination="0t4-mT-HD8" eventType="editingDidEndOnExit" id="wTN-ne-FHv"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER YOUR NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUR-MN-Flg">
+                                <rect key="frame" x="0.0" y="281" width="375" height="35"/>
                                 <color key="backgroundColor" red="0.89869350189999997" green="0.4189298749" blue="0.1870625615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="awz-VQ-dx9"/>
-                                    <constraint firstAttribute="width" constant="300" id="ckJ-9v-6H8"/>
+                                    <constraint firstAttribute="height" constant="35" id="jkd-DV-5rF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="25"/>
-                                <state key="normal" title="PLAY">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="VRe-6I-NiS" kind="show" id="XOX-0l-Dgg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15A-fz-rbi">
-                                <rect key="frame" x="32" y="542" width="310" height="44"/>
-                                <color key="backgroundColor" red="0.89869350189999997" green="0.4189298749" blue="0.1870625615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="5rS-c0-VJu"/>
-                                    <constraint firstAttribute="width" constant="300" id="QWn-90-2nN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="25"/>
-                                <state key="normal" title="HIGHSCORE">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="h5O-vo-bMW" kind="show" id="J7i-dY-vFa"/>
-                                </connections>
-                            </button>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="15A-fz-rbi" firstAttribute="top" secondItem="MKY-RO-r6I" secondAttribute="bottom" constant="10" id="5ch-HV-3at"/>
-                            <constraint firstItem="7QA-s1-5gd" firstAttribute="top" secondItem="MKY-RO-r6I" secondAttribute="bottom" constant="160" id="7wF-Zt-kzH"/>
-                            <constraint firstItem="MKY-RO-r6I" firstAttribute="centerX" secondItem="ikq-zh-4W9" secondAttribute="centerX" id="X9g-pY-wBu"/>
-                            <constraint firstItem="15A-fz-rbi" firstAttribute="centerX" secondItem="ikq-zh-4W9" secondAttribute="centerX" id="XzR-tM-8WV"/>
+                            <constraint firstItem="5XL-sK-LCe" firstAttribute="centerX" secondItem="mUR-MN-Flg" secondAttribute="centerX" id="2Mb-iV-Fwy"/>
+                            <constraint firstItem="5XL-sK-LCe" firstAttribute="top" secondItem="7SW-Yx-qVz" secondAttribute="bottom" constant="44" id="4lT-3e-RI6"/>
+                            <constraint firstItem="mUR-MN-Flg" firstAttribute="leading" secondItem="ikq-zh-4W9" secondAttribute="leading" id="Ag6-Ew-ghA"/>
+                            <constraint firstItem="7SW-Yx-qVz" firstAttribute="top" secondItem="mUR-MN-Flg" secondAttribute="bottom" constant="13" id="Rkn-8U-Nbf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7SW-Yx-qVz" secondAttribute="trailing" constant="15" id="muh-YB-yIM"/>
+                            <constraint firstItem="mUR-MN-Flg" firstAttribute="top" secondItem="SCu-RK-Vk9" secondAttribute="bottom" constant="281" id="nMk-7E-zo5"/>
+                            <constraint firstItem="7SW-Yx-qVz" firstAttribute="leading" secondItem="ikq-zh-4W9" secondAttribute="leadingMargin" constant="17" id="qi9-ks-4eL"/>
+                            <constraint firstItem="5XL-sK-LCe" firstAttribute="centerX" secondItem="ikq-zh-4W9" secondAttribute="centerX" id="xf6-Cp-ACV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ed8-Ax-TyU">
                         <barButtonItem key="backBarButtonItem" title=" " id="fXy-hh-BpG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="highscoreBtn" destination="15A-fz-rbi" id="MNq-vX-68g"/>
+                        <outlet property="informationTxtLbl" destination="mUR-MN-Flg" id="FfF-Tt-YXS"/>
+                        <outlet property="insertNameTxtFld" destination="7SW-Yx-qVz" id="nWh-Zi-bYN"/>
+                        <outlet property="playBtn" destination="MKY-RO-r6I" id="2G7-Db-nbI"/>
+                        <outlet property="settingsBtn" destination="1fT-CV-nJk" id="tIh-gG-QEA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXA-19-aYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,14 +413,14 @@
                         <viewControllerLayoutGuide type="bottom" id="jEj-yq-09K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gfk-ea-HDo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Cxi-Ul-CjS">
-                                <rect key="frame" x="16" y="108" width="343" height="313"/>
+                                <rect key="frame" x="16" y="43" width="343" height="314"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dwu-Gu-CTf">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="144"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="144.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDf-xA-hRG">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -333,13 +429,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Tq-B8-UEZ">
-                                                <rect key="frame" x="0.0" y="25.5" width="343" height="118.5"/>
+                                                <rect key="frame" x="0.0" y="25.5" width="343" height="119"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z4O-Vm-XXe">
-                                                        <rect key="frame" x="10" y="10" width="323" height="98.5"/>
+                                                        <rect key="frame" x="10" y="10" width="323" height="99"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhz-m9-UBC">
-                                                                <rect key="frame" x="0.0" y="0.0" width="156.5" height="98.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="156.5" height="99"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="Time attack">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -349,7 +445,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQt-aP-Vii">
-                                                                <rect key="frame" x="166.5" y="0.0" width="156.5" height="98.5"/>
+                                                                <rect key="frame" x="166.5" y="0.0" width="156.5" height="99"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="Time trial">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -374,7 +470,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="l1s-OW-rZg">
-                                        <rect key="frame" x="0.0" y="169" width="343" height="144"/>
+                                        <rect key="frame" x="0.0" y="169.5" width="343" height="144.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiplayer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaY-K8-rNG">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -383,13 +479,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTe-Rm-EKb">
-                                                <rect key="frame" x="0.0" y="25.5" width="343" height="118.5"/>
+                                                <rect key="frame" x="0.0" y="25.5" width="343" height="119"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pOc-Hs-vg8">
-                                                        <rect key="frame" x="10" y="10" width="323" height="98.5"/>
+                                                        <rect key="frame" x="10" y="10" width="323" height="99"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8u-5I-TNk">
-                                                                <rect key="frame" x="0.0" y="0.0" width="156.5" height="98.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="156.5" height="99"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="Online">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -399,7 +495,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zH7-Mn-dD6">
-                                                                <rect key="frame" x="166.5" y="0.0" width="156.5" height="98.5"/>
+                                                                <rect key="frame" x="166.5" y="0.0" width="156.5" height="99"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="Local">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -459,7 +555,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zRL-j9-csZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L1E-oM-thL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="efs-bC-byi">
@@ -538,7 +634,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -559,14 +655,14 @@
                         <viewControllerLayoutGuide type="bottom" id="R72-ll-3sd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z5W-0v-GQK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-75-r63">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3H1-rv-cre">
-                                        <rect key="frame" x="20" y="271" width="335" height="124"/>
+                                        <rect key="frame" x="20" y="239" width="335" height="124"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="n9p-JD-TdR">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="74"/>
@@ -637,7 +733,7 @@
         <image name="sword-badge.png" width="308" height="308"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Dc-Qn-ztj"/>
+        <segue reference="fVG-ha-fR0"/>
         <segue reference="Z81-3m-dum"/>
     </inferredMetricsTieBreakers>
 </document>
