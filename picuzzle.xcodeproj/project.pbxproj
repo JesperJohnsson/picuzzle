@@ -14,6 +14,7 @@
 		0B41299A1DF489F200DABE91 /* AAAScore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4129981DF489F200DABE91 /* AAAScore+CoreDataClass.swift */; };
 		0B41299B1DF489F200DABE91 /* AAAScore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4129991DF489F200DABE91 /* AAAScore+CoreDataProperties.swift */; };
 		0B4129A51DF6F37900DABE91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B4129A41DF6F37900DABE91 /* GoogleService-Info.plist */; };
+		0B4129A71DF7361300DABE91 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4129A61DF7361300DABE91 /* SettingsViewController.swift */; };
 		0B4DC0111DF0815100B96138 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4DC0101DF0815100B96138 /* Player.swift */; };
 		0B6577A51DDDDF7600DFE24E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6577A41DDDDF7600DFE24E /* AppDelegate.swift */; };
 		0B6577AB1DDDDF7600DFE24E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6577AA1DDDDF7600DFE24E /* GameScene.swift */; };
@@ -59,6 +60,7 @@
 		0B4129981DF489F200DABE91 /* AAAScore+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AAAScore+CoreDataClass.swift"; path = "../AAAScore+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0B4129991DF489F200DABE91 /* AAAScore+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AAAScore+CoreDataProperties.swift"; path = "../AAAScore+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0B4129A41DF6F37900DABE91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0B4129A61DF7361300DABE91 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0B4DC0101DF0815100B96138 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		0B6577A11DDDDF7600DFE24E /* picuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = picuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B6577A41DDDDF7600DFE24E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				0B71B5451DF1DC0400F399A4 /* ContentViewController.swift */,
 				0B4129891DF479F300DABE91 /* Picuzzle.xcdatamodeld */,
 				0B4129A41DF6F37900DABE91 /* GoogleService-Info.plist */,
+				0B4129A61DF7361300DABE91 /* SettingsViewController.swift */,
 			);
 			path = picuzzle;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				0B4DC0111DF0815100B96138 /* Player.swift in Sources */,
 				0B321D761DE226E000704BF9 /* Highscore.swift in Sources */,
 				0B6577A51DDDDF7600DFE24E /* AppDelegate.swift in Sources */,
+				0B4129A71DF7361300DABE91 /* SettingsViewController.swift in Sources */,
 				A3C1FB0A1DDE101700D3AD8F /* Element.swift in Sources */,
 				A3D51B031DF6B9F0000F0182 /* Reachability.swift in Sources */,
 				A3C1FB121DDE181200D3AD8F /* IndexViewController.swift in Sources */,

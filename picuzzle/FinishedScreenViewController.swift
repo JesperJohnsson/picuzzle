@@ -20,6 +20,15 @@ class FinishedScreenViewController: UIViewController {
         pointLbl.text = String(points)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideNavigation()
+    }
+    
+    func hideNavigation() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     @IBAction func backBtnPressed(_ sender: Any) {
         //Clears all of the pre existing views so they do not occupy memory and cause problems
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
