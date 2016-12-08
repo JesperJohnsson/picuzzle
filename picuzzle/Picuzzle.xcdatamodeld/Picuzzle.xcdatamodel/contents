@@ -2,9 +2,10 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G1108" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="AAAScore" representedClassName="AAAScore" syncable="YES">
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AAAScore" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="AAAScore" positionX="-54" positionY="-9" width="128" height="90"/>
     </elements>
 </model>
