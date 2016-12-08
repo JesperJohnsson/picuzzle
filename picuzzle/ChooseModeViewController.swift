@@ -41,7 +41,7 @@ class ChooseModeViewController: UIViewController {
     }
     
     func initiate(){
-         self.view.backgroundColor = BG_GRAY
+         self.view.backgroundColor = BG_YELLOW
     }
 
     

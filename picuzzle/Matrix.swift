@@ -9,11 +9,13 @@
 import Foundation
 import UIKit
 
-let NR_OF_COLUMNS = 4
-let NR_OF_ROWS = 4
-let ELEMENT_WIDTH = 50
-let ELEMENT_HEIGHT = 50
+let NR_OF_COLUMNS = 5
+let NR_OF_ROWS = 3
+let ELEMENT_WIDTH = 75
+let ELEMENT_HEIGHT = 75
 let BG_GRAY = UIColor(red: 239.0 / 255, green: 239.0 / 255, blue: 239.0 / 255, alpha: 1.0)
+let BG_ORANGE = UIColor(red: 244.0 / 255, green: 109.0 / 255, blue: 41.0 / 255, alpha: 1.0)
+let BG_YELLOW = UIColor(red: 246.0 / 255, green: 219.0 / 255, blue: 124.0 / 255, alpha: 1.0)
 
 class Matrix{
     var matrix: [[Element?]]
@@ -100,7 +102,7 @@ class Matrix{
         return nrOfElements
     }
     
-    func getElement(row: Int, column: Int)->Element!{
+    func getElement(row: Int, column: Int)->Element?{
         return self.matrix[row][column]
     }
     
