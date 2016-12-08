@@ -62,6 +62,22 @@ class GameViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
+    func randomString(length: Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
+    }
+    
     func gameOverPoints(_ points: Int){
         var ref = FIRDatabase.database().reference(withPath: "scores")
         
@@ -73,18 +89,16 @@ class GameViewController: UIViewController {
             ref = FIRDatabase.database().reference(withPath: "multiplayer")
         }
         
-        var scoreRef = ref.child("none")
+        let scoreRef = ref.child(randomString(length: 32))
         
         let finalScore = NSEntityDescription.insertNewObject(forEntityName: "AAAScore", into: context) as! AAAScore
         
         let defaults = UserDefaults.standard
         if let userName = defaults.string(forKey: "userNameKey") {
             finalScore.setValue(userName, forKey: "userName")
-            scoreRef = ref.child(userName)
             scoreRef.setValue(["userName": userName, "value": points])
         } else {
             finalScore.setValue("Anonymous", forKey: "userName")
-            scoreRef = ref.child("Anonymous")
             scoreRef.setValue(["userName": "Anonymous", "value": points])
         }
         
