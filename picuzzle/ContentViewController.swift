@@ -61,7 +61,7 @@ class ContentViewController: UIViewController {
     func getLocalData() {
         resetHighscoreList()
         let scoresFetch = NSFetchRequest<AAAScore>(entityName: "AAAScore")
-        let predicate = NSPredicate(format: "type = %@", self.location)
+        let predicate = NSPredicate(format: "type = %@", self.titleText)
         let valueSort = NSSortDescriptor(key: "value", ascending: false)
         scoresFetch.sortDescriptors = [valueSort]
         scoresFetch.predicate = predicate
