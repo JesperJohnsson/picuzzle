@@ -13,9 +13,11 @@ class ContentViewController: UIViewController {
     
     @IBOutlet var highscoreList: [UILabel]!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
     
     var pageIndex: Int!
     var titleText: String!
+    var imagePath: String!
     var highscore: Highscore!
     
     override func viewDidLoad() {
@@ -39,6 +41,7 @@ class ContentViewController: UIViewController {
             }
             
             self.titleLabel.text = self.titleText
+            self.image.image = UIImage(named: self.imagePath)
             
             for i in 0..<self.highscore.getCount() {
                 self.highscoreList[i].text = "\(i + 1). " + String(self.highscore.getScore(index: i).value) + "p"

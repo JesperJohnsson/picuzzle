@@ -13,6 +13,7 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
     var pageViewController: UIPageViewController!
     var pageTitles: NSArray!
     var highscores: NSArray!
+    var images: NSArray!
     var imageBadge: UIImageView!
     
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         
         self.pageTitles = NSArray(objects: "Time Attack", "Time Trial", "Multiplayer")
         self.highscores = NSArray(objects: Highscore(), Highscore(), Highscore())
+        self.images = NSArray(objects: "sword-badge", "clock-badge", "multiplayer-badge")
         
         self.pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! UIPageViewController
         
@@ -37,7 +39,6 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMove(toParentViewController: self)
-        self.initiate()
     }
     
     func initiate(){
@@ -55,32 +56,16 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         self.view.backgroundColor = BG_GRAY
     }
     
-    func changeBadge(atIndex: Int){
-        print(atIndex)
-        switch(atIndex){
-        case 0:
-            imageBadge.image = UIImage(named:"sword-badge")
-            break
-        case 1:
-            imageBadge.image = UIImage(named:"clock-badge")
-            break
-        case 2:
-            imageBadge.image = UIImage(named:"multiplayer-badge")
-            break
-        default:
-            imageBadge.image = UIImage(named:"sword-badge")
-            break
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showNavigation()
     }
-
+    
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     func viewControllerAtIndex(index: Int) -> ContentViewController {
-        
-        self.changeBadge(atIndex: index)
-        
         if ((self.pageTitles.count == 0) || (index >= self.pageTitles.count)) {
             return ContentViewController()
         }
@@ -91,6 +76,7 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         print("title text")
         print(vc.titleText)
         vc.highscore = self.highscores[index] as! Highscore
+        vc.imagePath = self.images[index] as! String
         vc.pageIndex = index
         
         return vc
@@ -134,7 +120,7 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         return 0
     }
     
-    
-    
-    
+    func showNavigation() {
+        self.navigationController?.navigationBar.isHidden = false
+    }
 }

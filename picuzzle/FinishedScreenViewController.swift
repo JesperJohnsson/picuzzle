@@ -33,6 +33,9 @@ class FinishedScreenViewController: UIViewController {
         //self.popupView.image = UIImage(named:"clock-badge")!
         self.popupView.isHidden = true
         self.popupView.alpha = 0.0
+        
+        super.viewWillAppear(animated)
+        hideNavigation()
     }
     
     override func viewDidAppear(_ animated: Bool){
@@ -108,6 +111,10 @@ class FinishedScreenViewController: UIViewController {
             print(error)
         }
         return (false, -1)
+    }
+    
+    func hideNavigation() {
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {
