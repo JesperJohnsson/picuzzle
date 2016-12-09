@@ -139,6 +139,7 @@ class GameViewController: UIViewController {
         if let destination = segue.destination as? FinishedScreenViewController {
             if let points = sender as? Int{
                 destination.points = points
+                destination.mode = _selectedMode
             }
         }
     }

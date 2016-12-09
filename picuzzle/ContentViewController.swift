@@ -13,7 +13,7 @@ import FirebaseDatabase
 class ContentViewController: UIViewController {
     
     @IBOutlet weak var highscoreList: UIStackView!
-    @IBOutlet weak var titleLabel: UILabel!
+    //@IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     
     var pageIndex: Int!
@@ -44,7 +44,6 @@ class ContentViewController: UIViewController {
     }
     
     func resetHighscoreList() {
-        self.titleLabel.text = self.titleText
         self.image.image = UIImage(named: self.imagePath)
         
         for i in 0..<5 {

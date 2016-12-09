@@ -7,11 +7,24 @@
 //
 
 import Foundation
+import UIKit
 
-let NR_OF_COLUMNS = 4
-let NR_OF_ROWS = 4
-let ELEMENT_WIDTH = 50
-let ELEMENT_HEIGHT = 50
+let NR_OF_COLUMNS = 5
+let NR_OF_ROWS = 3
+let DEVICE_SCREEN_SIZE = UIScreen.main.bounds
+func getElementSize()->Int{
+    print("DEVICE HEIGHT: " + String(describing: DEVICE_SCREEN_SIZE.size.height))
+    print("DEVICE WIDTH: " + String(describing: DEVICE_SCREEN_SIZE.size.width))
+    if(DEVICE_SCREEN_SIZE.height == 568 && DEVICE_SCREEN_SIZE.width == 320){
+        return 50
+    }
+    return 75
+}
+let ELEMENT_WIDTH = getElementSize()
+let ELEMENT_HEIGHT = getElementSize()
+let BG_GRAY = UIColor(red: 239.0 / 255, green: 239.0 / 255, blue: 239.0 / 255, alpha: 1.0)
+let BG_ORANGE = UIColor(red: 244.0 / 255, green: 109.0 / 255, blue: 41.0 / 255, alpha: 1.0)
+let BG_YELLOW = UIColor(red: 246.0 / 255, green: 219.0 / 255, blue: 124.0 / 255, alpha: 1.0)
 
 class Matrix{
     var matrix: [[Element?]]
@@ -39,29 +52,39 @@ class Matrix{
     func createElements(){
         var arr = [Element]()
         
-        arr.append(Element(row: 0, column: 1, id: 1, sp: "green.png"))
-        arr.append(Element(row: 0, column: 1, id: 1, sp: "green.png"))
+        /*
+        var count = (NR_OF_COLUMNS*NR_OF_ROWS) / 2
         
-        arr.append(Element(row: 0, column: 1, id: 2, sp: "red.png"))
-        arr.append(Element(row: 0, column: 1, id: 2, sp: "red.png"))
+        print("cOUNT " + String(count))
         
-        arr.append(Element(row: 0, column: 1, id: 3, sp: "yellow.png"))
-        arr.append(Element(row: 0, column: 1, id: 3, sp: "yellow.png"))
+        for var i in 1..<count + 1{
+            arr.append(Element(row: 0, column: 1, id: i, sp: String(i) + "_1.png"))
+            arr.append(Element(row: 0, column: 1, id: i, sp: String(i) + "_2.png"))
+        }*/
         
-        arr.append(Element(row: 0, column: 1, id: 4, sp: "blue.png"))
-        arr.append(Element(row: 0, column: 1, id: 4, sp: "blue.png"))
+        arr.append(Element(row: 0, column: 1, id: 1, sp: "1_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 1, sp: "1_2.png"))
         
-        arr.append(Element(row: 0, column: 1, id: 5, sp: "orange.png"))
-        arr.append(Element(row: 0, column: 1, id: 5, sp: "orange.png"))
+        arr.append(Element(row: 0, column: 1, id: 2, sp: "2_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 2, sp: "2_2.png"))
         
-        arr.append(Element(row: 0, column: 1, id: 6, sp: "black.png"))
-        arr.append(Element(row: 0, column: 1, id: 6, sp: "black.png"))
+        arr.append(Element(row: 0, column: 1, id: 3, sp: "3_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 3, sp: "3_2.png"))
         
-        arr.append(Element(row: 0, column: 1, id: 7, sp: "white.png"))
-        arr.append(Element(row: 0, column: 1, id: 7, sp: "white.png"))
+        arr.append(Element(row: 0, column: 1, id: 4, sp: "4_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 4, sp: "4_2.png"))
         
-        arr.append(Element(row: 0, column: 1, id: 8, sp: "pink.png"))
-        arr.append(Element(row: 0, column: 1, id: 8, sp: "pink.png"))
+        arr.append(Element(row: 0, column: 1, id: 5, sp: "5_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 5, sp: "5_2.png"))
+        
+        arr.append(Element(row: 0, column: 1, id: 6, sp: "6_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 6, sp: "6_2.png"))
+        
+        arr.append(Element(row: 0, column: 1, id: 7, sp: "7_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 7, sp: "7_2.png"))
+        
+        arr.append(Element(row: 0, column: 1, id: 8, sp: "8_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 8, sp: "8_2.png"))
         self.rangElementsRandom(arr: arr)
     }
     
@@ -98,7 +121,7 @@ class Matrix{
         return nrOfElements
     }
     
-    func getElement(row: Int, column: Int)->Element!{
+    func getElement(row: Int, column: Int)->Element?{
         return self.matrix[row][column]
     }
     

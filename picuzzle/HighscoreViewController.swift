@@ -30,7 +30,7 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         self.pageTitles = NSArray(objects: "Time Attack", "Time Trial", "Multiplayer")
         self.locations = NSArray(objects: "timeattack", "timetrial", "multiplayer")
         //self.highscores = NSArray(objects: Highscore(), Highscore(), Highscore())
-        self.images = NSArray(objects: "sword-badge", "clock-badge", "multiplayer-badge")
+        self.images = NSArray(objects: "timeattack-sign", "timetrial-sign", "multi-sign")
         
         self.pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! UIPageViewController
         
@@ -48,6 +48,21 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMove(toParentViewController: self)
+    }
+    
+    func initiate(){
+        imageBadge = UIImageView(frame:CGRect(x: self.view.frame.midX - 37, y: 120, width: 75, height: 75))
+        imageBadge.image = UIImage(named:"sword-badge")
+        self.view.addSubview(imageBadge)
+        self.view.sendSubview(toBack: imageBadge)
+        
+        /*
+        let backgroundImage = UIImageView(frame:CGRect(x: 0, y: self.view.frame.maxY - 100, width: 750, height: 100))
+        backgroundImage.image = UIImage(named: "foot1.png")
+        self.view.insertSubview(backgroundImage, at: 0)
+        */
+        
+        self.view.backgroundColor = BG_GRAY
     }
     
     override func viewWillAppear(_ animated: Bool) {

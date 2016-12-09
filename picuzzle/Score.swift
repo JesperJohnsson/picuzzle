@@ -29,6 +29,10 @@ class Score {
         }
     }
     
+    init(value: Int) {
+        _value = value
+    }
+    
     init(value: Int, userName: String) {
         _value = value
         _userName = userName
