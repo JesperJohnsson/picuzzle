@@ -26,7 +26,6 @@ class Element{
         self.row = row
         self.column = column
         
-        
         self.sprite = SKSpriteNode(imageNamed: "example.png")
     }
     
@@ -35,9 +34,10 @@ class Element{
         self.id = id
         self.row = row
         self.column = column
-        var texture = SKTexture(imageNamed: sp)
-        self.sprite = SKSpriteNode()
-        self.sprite.texture = texture
+        //var texture = SKTexture(imageNamed: "sword-badge")
+        self.sprite = SKSpriteNode(imageNamed: sp)
+        //self.sprite.texture = texture
+        
     }
     
     func setCordinates(row: Int, column: Int){

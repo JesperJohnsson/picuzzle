@@ -159,6 +159,7 @@ class GameScene: SKScene {
                     print("SAME ELEMENT")
                     self.animateInActiveElement(elem: foundElement!)
                     self.grab.clearElement()
+                    self.nrOfClicks = 0
                 }
                 else{
                     self.animateActiveElement(elem: foundElement!)
@@ -227,7 +228,11 @@ class GameScene: SKScene {
         monsterSprite.zPosition = 100
         var time = 0.1
         let scale = SKAction.scale(by: 1.25, duration: time)
-        let colorize = SKAction.colorize(with: .black,colorBlendFactor: 1, duration: 2)
+        //let colorize = SKAction.colorize(with: .black,colorBlendFactor: 1, duration: 2)
+        //let wiggleIn = SKAction.scaleX(to: 1.0, duration: 0.2)
+        //let wiggleOut = SKAction.scaleX(to: 1.2, duration: 0.2)
+        //let wiggle = SKAction.sequence([wiggleIn, wiggleOut, scale])
+        
         monsterSprite.run(scale)
     }
     
@@ -296,23 +301,25 @@ class GameScene: SKScene {
         var xPosition = Int(middle!.x) - gamePosMiddleX //125/2
         var yPosition = Int(middle!.y) + gamePosMiddleY
         
+        var startPosY = Int(middle!.y) - gamePosMiddleY
         /*
-        print("POINTER" + String(describing: point))
-        print("X POS: " + String(xPosition))
-        print("Y POS: " + String(yPosition))
-        print("MAXIUMY: " + String(describing: CGFloat(220) + CGFloat(NR_OF_ROWS)*CGFloat(ELEMENT_HEIGHT)))
-        */
+        print("_________________________________________")
+        print("Y POSITION " + String(yPosition))
+        print("Y POSITION " + String(startPosY))
+        print("Y POSITION " + String(gamePosMiddleY))
+        print("Y POSITION " + String(describing: middle!.y))
+       */
         
         let TileHeight = CGFloat(ELEMENT_HEIGHT)
         let TileWidth = CGFloat(ELEMENT_WIDTH)
         if point.x >= CGFloat(xPosition) && point.x < CGFloat(ELEMENT_WIDTH*NR_OF_COLUMNS) + CGFloat(NR_OF_ROWS)*TileWidth &&
-            point.y >= CGFloat(220) && point.y < CGFloat(220) + CGFloat(NR_OF_ROWS)*CGFloat(ELEMENT_HEIGHT){
+            point.y >= CGFloat(startPosY) && point.y < CGFloat(startPosY) + CGFloat(NR_OF_ROWS)*CGFloat(ELEMENT_HEIGHT){
             /*
             print("koordinater")
             print(point.y/TileHeight)
             print(point.x/TileWidth)
             */
-            return (true, Int((point.y - 220)/TileHeight), Int((point.x - 0)/TileWidth))
+            return (true, Int((point.y - CGFloat(startPosY))/TileHeight), Int((point.x - 0)/TileWidth))
             
         } else{
             print("false")
