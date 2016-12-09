@@ -20,9 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         let pageController = UIPageControl.appearance()
         pageController.pageIndicatorTintColor = UIColor.lightGray
-        pageController.currentPageIndicatorTintColor = UIColor.black
+        pageController.currentPageIndicatorTintColor = BG_ORANGE
         //pageController.backgroundColor = UIColor.red
         
+        let titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        let titleTextAttributes2 = [NSForegroundColorAttributeName: UIColor.black]
+        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes2, for: .normal)
+
         FIRApp.configure()
         return true
     }
