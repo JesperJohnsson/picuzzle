@@ -1,6 +1,13 @@
 import UIKit
 import CoreData
 
+
+enum UIUserInterfaceIdiom : Int {
+    case Unspecified
+    case Phone // iPhone and iPod touch style UI
+    case Pad // iPad style UI
+}
+
 class IndexViewController: UIViewController {
 
     @IBOutlet weak var informationTxtLbl: UILabel!
@@ -13,6 +20,10 @@ class IndexViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*if(UIDevice.current.userInterfaceIdiom == .phone){
+            print("IPHONE")
+        }*/
         
         if let userName = defaults.string(forKey: "userNameKey") {
             setUserNameInformation(name: userName)

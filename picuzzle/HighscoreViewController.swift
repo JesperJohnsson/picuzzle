@@ -41,6 +41,21 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         self.pageViewController.didMove(toParentViewController: self)
     }
     
+    func initiate(){
+        imageBadge = UIImageView(frame:CGRect(x: self.view.frame.midX - 37, y: 120, width: 75, height: 75))
+        imageBadge.image = UIImage(named:"sword-badge")
+        self.view.addSubview(imageBadge)
+        self.view.sendSubview(toBack: imageBadge)
+        
+        /*
+        let backgroundImage = UIImageView(frame:CGRect(x: 0, y: self.view.frame.maxY - 100, width: 750, height: 100))
+        backgroundImage.image = UIImage(named: "foot1.png")
+        self.view.insertSubview(backgroundImage, at: 0)
+        */
+        
+        self.view.backgroundColor = BG_GRAY
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         showNavigation()
@@ -58,6 +73,8 @@ class HighscoreViewController: UIViewController, UIPageViewControllerDataSource 
         let vc: ContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "ContentViewController") as! ContentViewController
         
         vc.titleText = self.pageTitles[index] as! String
+        print("title text")
+        print(vc.titleText)
         vc.highscore = self.highscores[index] as! Highscore
         vc.imagePath = self.images[index] as! String
         vc.pageIndex = index

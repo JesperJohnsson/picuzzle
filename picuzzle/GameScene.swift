@@ -35,8 +35,8 @@ class GameScene: SKScene {
         self.nrOfElements = ELEMENT_HEIGHT * ELEMENT_WIDTH
         self.points = 0
         
-        let TileWidth: CGFloat = 50.0
-        let TileHeight: CGFloat = 50.0
+        let TileWidth: CGFloat = CGFloat(ELEMENT_WIDTH)
+        let TileHeight: CGFloat = CGFloat(ELEMENT_HEIGHT)
         let gamePos = CGPoint(
             x: -TileWidth * CGFloat(ELEMENT_WIDTH) / 2,
             y: -TileHeight * CGFloat(ELEMENT_HEIGHT) / 2)
@@ -84,7 +84,7 @@ class GameScene: SKScene {
     
     func setTimeAttackTimer(){
         /* TIDEN GÅR NER */
-        self.seconds = 40
+        self.seconds = 10
         label.text = String(self.seconds)
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameScene.counterDown), userInfo: nil, repeats: true)
     }
@@ -146,41 +146,46 @@ class GameScene: SKScene {
         
         let (success, rowen, columnen) = convertPoint(location!)
         if success{
-            let foundElement = self.matrix.getElement(row: rowen, column: columnen)!
-            self.nrOfClicks += 1
-            
-            /* SET ELEMENT INTO GRAB */
-            var prevElem = self.grab.getElement()
-            
-            if(foundElement.row == prevElem.row && foundElement.column == prevElem.column && self.nrOfClicks == 2){
-                //nothing
-                print("SAME ELEMENT")
-                self.animateInActiveElement(elem: foundElement)
-                self.grab.clearElement()
-            }
-            else{
-                self.animateActiveElement(elem: foundElement)
-                if(foundElement.id == self.grab.getElement().id && self.nrOfClicks == 2){
+            let foundElement = self.matrix.getElement(row: rowen, column: columnen)
+            if(foundElement != nil){
+                print("NO NIL!")
+                self.nrOfClicks += 1
+                
+                /* SET ELEMENT INTO GRAB */
+                var prevElem = self.grab.getElement()
+                
+                if(foundElement!.row == prevElem.row && foundElement!.column == prevElem.column && self.nrOfClicks == 2){
+                    //nothing
+                    print("SAME ELEMENT")
+                    self.animateInActiveElement(elem: foundElement!)
+                    self.grab.clearElement()
                     self.nrOfClicks = 0
-                    self.removeElement(element: self.grab.getElement())
-                    self.removeElement(element: foundElement)
-                    self.setPoint()
-                    print("1")
-                    print(self.matrix.getNrOfElements())
-                    if(self.mode == "Time Attack" && self.matrix.getNrOfElements() == 0){
-                        print("GAME OVER")
-                        self.createAndShuffleElems()
+                }
+                else{
+                    self.animateActiveElement(elem: foundElement!)
+                    if(foundElement!.id == self.grab.getElement().id && self.nrOfClicks == 2){
+                        self.nrOfClicks = 0
+                        self.removeElement(element: self.grab.getElement())
+                        self.removeElement(element: foundElement!)
+                        self.setPoint()
+                        print("1")
+                        print(self.matrix.getNrOfElements())
+                        if(self.mode == "Time Attack" && self.matrix.getNrOfElements() == 0){
+                            print("GAME OVER")
+                            self.createAndShuffleElems()
+                        }
                     }
+                    else if(self.nrOfClicks == 2){
+                        print("not same element");
+                        self.nrOfClicks = 0
+                        self.animateInActiveElement(elem: self.grab.getElement())
+                        self.animateInActiveElement(elem: foundElement!)
+                    }
+                    self.grab.setElement(element: foundElement!)
                 }
-                else if(self.nrOfClicks == 2){
-                    print("not same element");
-                    self.nrOfClicks = 0
-                    self.animateInActiveElement(elem: self.grab.getElement())
-                    self.animateInActiveElement(elem: foundElement)
-                }
-                self.grab.setElement(element: foundElement)
+                
             }
-            
+            else{print("NIL!")}
         }
         else{ print("miss")}
     }
@@ -197,7 +202,6 @@ class GameScene: SKScene {
             
         if let sprite = tempElem?.sprite {
             if sprite.action(forKey: "removing") == nil {
-                print("PANG PUNG")
                 let scaleAction = SKAction.scale(to: 0.1, duration: 0.3)
                 scaleAction.timingMode = .easeOut
                 sprite.run(SKAction.sequence([scaleAction, SKAction.removeFromParent()]),
@@ -224,7 +228,11 @@ class GameScene: SKScene {
         monsterSprite.zPosition = 100
         var time = 0.1
         let scale = SKAction.scale(by: 1.25, duration: time)
-        let colorize = SKAction.colorize(with: .black,colorBlendFactor: 1, duration: 2)
+        //let colorize = SKAction.colorize(with: .black,colorBlendFactor: 1, duration: 2)
+        //let wiggleIn = SKAction.scaleX(to: 1.0, duration: 0.2)
+        //let wiggleOut = SKAction.scaleX(to: 1.2, duration: 0.2)
+        //let wiggle = SKAction.sequence([wiggleIn, wiggleOut, scale])
+        
         monsterSprite.run(scale)
     }
     
@@ -254,6 +262,8 @@ class GameScene: SKScene {
         
         var xPosition = Int(middle!.x) - gamePosMiddleX //125/2
         var yPosition = Int(middle!.y) + gamePosMiddleY //667
+        
+        
         var rows = NR_OF_ROWS
         var columns = NR_OF_COLUMNS
         matrix.initiateElements()
@@ -270,12 +280,12 @@ class GameScene: SKScene {
                     let background = element!.sprite
                     //background.anchorPoint = CGPoint(x: 0, y: 1) // 0, 1
                     background.size = CGSize(width: CGFloat(ELEMENT_WIDTH), height: CGFloat(ELEMENT_HEIGHT))
-                    background.position = CGPoint(x:xPosition + tempPosX + 25, y:yPosition + tempPosY - 25);
+                    background.position = CGPoint(x:xPosition + tempPosX + (ELEMENT_WIDTH/2), y:yPosition + tempPosY - (ELEMENT_HEIGHT/2));
                     self.addChild(background)
                 }
-                tempPosX = tempPosX + 50
+                tempPosX = tempPosX + ELEMENT_WIDTH
             }
-            tempPosY = tempPosY - 50
+            tempPosY = tempPosY - ELEMENT_HEIGHT
             tempPosX = 0
         }
     }
@@ -291,18 +301,29 @@ class GameScene: SKScene {
         var xPosition = Int(middle!.x) - gamePosMiddleX //125/2
         var yPosition = Int(middle!.y) + gamePosMiddleY
         
-        let TileHeight = CGFloat(50)
-        let TileWidth = CGFloat(50)
-        if point.x >= CGFloat(87) && point.x < CGFloat(87) + CGFloat(NR_OF_ROWS)*TileWidth &&
-            point.y >= CGFloat(235) && point.y < CGFloat(235) + CGFloat(NR_OF_COLUMNS)*TileHeight{
+        var startPosY = Int(middle!.y) - gamePosMiddleY
+        /*
+        print("_________________________________________")
+        print("Y POSITION " + String(yPosition))
+        print("Y POSITION " + String(startPosY))
+        print("Y POSITION " + String(gamePosMiddleY))
+        print("Y POSITION " + String(describing: middle!.y))
+       */
+        
+        let TileHeight = CGFloat(ELEMENT_HEIGHT)
+        let TileWidth = CGFloat(ELEMENT_WIDTH)
+        if point.x >= CGFloat(xPosition) && point.x < CGFloat(ELEMENT_WIDTH*NR_OF_COLUMNS) + CGFloat(NR_OF_ROWS)*TileWidth &&
+            point.y >= CGFloat(startPosY) && point.y < CGFloat(startPosY) + CGFloat(NR_OF_ROWS)*CGFloat(ELEMENT_HEIGHT){
+            /*
             print("koordinater")
             print(point.y/TileHeight)
             print(point.x/TileWidth)
-            return (true, Int((point.y - 235)/TileHeight), Int((point.x - 87)/TileWidth))
+            */
+            return (true, Int((point.y - CGFloat(startPosY))/TileHeight), Int((point.x - 0)/TileWidth))
             
         } else{
             print("false")
-            return (false, 0, 0)  // invalid location
+            return (false, -1, -1)  // invalid location
         }
     }
     
