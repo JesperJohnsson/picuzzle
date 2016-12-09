@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 class Score {
     private var _value: Int!
+    private var _userName: String!
     
     var value: Int {
         get {
@@ -19,7 +21,27 @@ class Score {
         }
     }
     
+    var userName: String {
+        get {
+            return _userName
+        } set {
+            _userName = newValue
+        }
+    }
+    
     init(value: Int) {
         _value = value
     }
+    
+    init(value: Int, userName: String) {
+        _value = value
+        _userName = userName
+    }
+    
+    init(snapshot: FIRDataSnapshot) {
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        _value = snapshotValue["value"] as! Int
+        _userName = snapshotValue["userName"] as! String
+    }
+    
 }

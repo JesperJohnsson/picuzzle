@@ -9,7 +9,7 @@
 import UIKit
 
 class MultiplayerLocalViewController: UIViewController {
-    var players: [Player] = []
+    //var players: [Player] = []
 
     @IBOutlet weak var player1Name: UITextField!
     @IBOutlet weak var player2Name: UITextField!
@@ -20,8 +20,8 @@ class MultiplayerLocalViewController: UIViewController {
     }
 
     @IBAction func startGameBtnPressed(_ sender: Any) {
-        players.append(Player(name: player1Name.text!))
-        players.append(Player(name: player2Name.text!))
+        //players.append(Player(name: player1Name.text!))
+        //players.append(Player(name: player2Name.text!))
         
         performSegue(withIdentifier: "GameViewController", sender: nil)
     }

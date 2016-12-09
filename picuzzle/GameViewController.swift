@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 import CoreData
+import FirebaseDatabase
 
 class GameViewController: UIViewController {
     
@@ -25,7 +26,7 @@ class GameViewController: UIViewController {
 
     var gameboardScene: GameScene!
     var gameoverScene: GMScene!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -61,13 +62,48 @@ class GameViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
+    func randomString(length: Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
+    }
+    
     func gameOverPoints(_ points: Int){
-        /* Function for future use? */
-        print("callback")
+        var ref = FIRDatabase.database().reference(withPath: "scores")
+        
+        if(_selectedMode == "Time Attack") {
+            ref = FIRDatabase.database().reference(withPath: "timeattack")
+        } else if(_selectedMode == "Time Trial") {
+            ref = FIRDatabase.database().reference(withPath: "timetrial")
+        } else if(_selectedMode == "Multiplayer") {
+            ref = FIRDatabase.database().reference(withPath: "multiplayer")
+        }
+        
+        let scoreRef = ref.child(randomString(length: 32))
         
         let finalScore = NSEntityDescription.insertNewObject(forEntityName: "AAAScore", into: context) as! AAAScore
+        
+        let defaults = UserDefaults.standard
+        if let userName = defaults.string(forKey: "userNameKey") {
+            finalScore.setValue(userName, forKey: "userName")
+            scoreRef.setValue(["userName": userName, "value": points])
+        } else {
+            finalScore.setValue("Anonymous", forKey: "userName")
+            scoreRef.setValue(["userName": "Anonymous", "value": points])
+        }
+        
         finalScore.setValue(points, forKey: "value")
-        finalScore.setValue(self.selectedMode, forKey: "type")
+        finalScore.setValue(_selectedMode, forKey: "type")
          
         do {
             try finalScore.managedObjectContext?.save()
@@ -76,17 +112,6 @@ class GameViewController: UIViewController {
         }
         
         performSegue(withIdentifier: "gameoverSegue", sender: points)
-        /*
-        switch _selectedMode{
-        case "Time Attack":
-            print("Time Attack")
-        case "Time Trial":
-            print("Time Trial")
-        default:
-            print("Time Attack")
-        }*/
-        //self.gameoverScene.setResult(result: points)
-        //performSegue(withIdentifier: "back", sender: nil)
     }
 
     override var shouldAutorotate: Bool {
