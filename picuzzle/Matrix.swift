@@ -96,15 +96,6 @@ class Matrix{
         arr.append(Element(row: 0, column: 1, id: 12, sp: "4_1.png"))
         arr.append(Element(row: 0, column: 1, id: 12, sp: "4_2.png"))
         
-        arr.append(Element(row: 0, column: 1, id: 13, sp: "5_1.png"))
-        arr.append(Element(row: 0, column: 1, id: 13, sp: "5_2.png"))
-        
-        arr.append(Element(row: 0, column: 1, id: 14, sp: "6_1.png"))
-        arr.append(Element(row: 0, column: 1, id: 14, sp: "6_2.png"))
-        
-        arr.append(Element(row: 0, column: 1, id: 15, sp: "7_1.png"))
-        arr.append(Element(row: 0, column: 1, id: 15, sp: "7_2.png"))
-        
         self.rangElementsRandom(arr: arr)
     }
     

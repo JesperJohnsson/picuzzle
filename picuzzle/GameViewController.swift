@@ -32,8 +32,8 @@ class GameViewController: UIViewController {
     
         let skView = view as! SKView
         
-        skView.showsFPS = true
-        skView.showsNodeCount = true
+        skView.showsFPS = false
+        skView.showsNodeCount = false
         
         skView.isMultipleTouchEnabled = false
         
@@ -62,24 +62,10 @@ class GameViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    func randomString(length: Int) -> String {
-        
-        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        let len = UInt32(letters.length)
-        
-        var randomString = ""
-        
-        for _ in 0 ..< length {
-            let rand = arc4random_uniform(len)
-            var nextChar = letters.character(at: Int(rand))
-            randomString += NSString(characters: &nextChar, length: 1) as String
-        }
-        
-        return randomString
-    }
-    
     func gameOverPoints(_ points: Int){
         var ref = FIRDatabase.database().reference(withPath: "scores")
+        let defaults = UserDefaults.standard
+        let highscoreList = Highscore()
         
         if(_selectedMode == "Time Attack") {
             ref = FIRDatabase.database().reference(withPath: "timeattack")
@@ -89,17 +75,33 @@ class GameViewController: UIViewController {
             ref = FIRDatabase.database().reference(withPath: "multiplayer")
         }
         
-        let scoreRef = ref.child(randomString(length: 32))
+        ref.queryOrdered(byChild: "value").observeSingleEvent(of: .value, with: { snapshot in
+            
+            for snapshotScore in snapshot.children {
+                let score = Score(snapshot: snapshotScore as! FIRDataSnapshot)
+                highscoreList.addScore(score: score)
+            }
+            
+            if let userName = defaults.string(forKey: "userNameKey") {
+                highscoreList.addScore(score: Score(value: points, userName: userName))
+            } else {
+                highscoreList.addScore(score: Score(value: points, userName: "Anonymous"))
+            }
+            
+            for i in 0..<highscoreList.getCount() {
+                let score = highscoreList.getScore(index: i)
+                let scoreRef = ref.child("child\(i)")
+                scoreRef.setValue(["userName": score.userName, "value": score.value])
+                
+            }
+        })
         
         let finalScore = NSEntityDescription.insertNewObject(forEntityName: "AAAScore", into: context) as! AAAScore
         
-        let defaults = UserDefaults.standard
         if let userName = defaults.string(forKey: "userNameKey") {
             finalScore.setValue(userName, forKey: "userName")
-            scoreRef.setValue(["userName": userName, "value": points])
         } else {
             finalScore.setValue("Anonymous", forKey: "userName")
-            scoreRef.setValue(["userName": "Anonymous", "value": points])
         }
         
         finalScore.setValue(points, forKey: "value")

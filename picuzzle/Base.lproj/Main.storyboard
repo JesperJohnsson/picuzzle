@@ -189,11 +189,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Ds3-cI-pje"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U8v-3W-8Gc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JQ9-3X-owT">
-                                <rect key="frame" x="112" y="28" width="150" height="29"/>
+                                <rect key="frame" x="112" y="8" width="150" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="0KZ-cT-MIx"/>
                                     <constraint firstAttribute="height" constant="28" id="dVd-Tg-3ay"/>
@@ -234,7 +234,7 @@
                         <viewControllerLayoutGuide type="bottom" id="oeV-Mc-2Cn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CNj-VH-Ehe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="daW-Bh-52o">
@@ -277,14 +277,14 @@
                         <viewControllerLayoutGuide type="bottom" id="K6e-43-zVf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MT6-Iw-St6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6q-5W-5Tv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Acg-6L-fZC">
-                                        <rect key="frame" x="20" y="286" width="335" height="95"/>
+                                        <rect key="frame" x="20" y="254" width="335" height="95"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E9G-at-xl6">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -389,11 +389,11 @@
                         <viewControllerLayoutGuide type="bottom" id="7QA-s1-5gd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ikq-zh-4W9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5XL-sK-LCe">
-                                <rect key="frame" x="20" y="423" width="335" height="140"/>
+                                <rect key="frame" x="20" y="359" width="335" height="140"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKY-RO-r6I">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
@@ -448,8 +448,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7SW-Yx-qVz">
-                                <rect key="frame" x="33" y="349" width="311" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7SW-Yx-qVz">
+                                <rect key="frame" x="33" y="319" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -458,7 +458,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER YOUR NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUR-MN-Flg">
-                                <rect key="frame" x="0.0" y="300" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="280" width="375" height="30"/>
                                 <color key="backgroundColor" red="0.89869350189999997" green="0.4189298749" blue="0.1870625615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="OWU-78-Ptv"/>
@@ -478,7 +478,7 @@
                             <constraint firstItem="5XL-sK-LCe" firstAttribute="leading" secondItem="ikq-zh-4W9" secondAttribute="leading" constant="20" id="fhh-Mv-rrb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7SW-Yx-qVz" secondAttribute="trailing" constant="15" id="muh-YB-yIM"/>
                             <constraint firstItem="7SW-Yx-qVz" firstAttribute="leading" secondItem="ikq-zh-4W9" secondAttribute="leadingMargin" constant="17" id="qi9-ks-4eL"/>
-                            <constraint firstItem="5XL-sK-LCe" firstAttribute="top" secondItem="7SW-Yx-qVz" secondAttribute="bottom" constant="40" id="sab-Wc-k2V"/>
+                            <constraint firstItem="5XL-sK-LCe" firstAttribute="top" secondItem="7SW-Yx-qVz" secondAttribute="bottom" constant="10" id="sab-Wc-k2V"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ed8-Ax-TyU">
@@ -505,11 +505,11 @@
                         <viewControllerLayoutGuide type="bottom" id="jEj-yq-09K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gfk-ea-HDo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="l0F-lS-k34">
-                                <rect key="frame" x="50" y="95" width="275" height="275"/>
+                                <rect key="frame" x="50" y="75" width="275" height="275"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="qsc-o9-66N">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="125"/>
@@ -552,6 +552,7 @@
                                                         </constraints>
                                                         <state key="normal" backgroundImage="timeAttack-button.png"/>
                                                         <connections>
+                                                            <action selector="multiplayerLocalBtnPressed:" destination="VRe-6I-NiS" eventType="touchUpInside" id="fKo-gf-DX6"/>
                                                             <segue destination="D1S-hh-S3J" kind="show" id="vy9-cp-DEc"/>
                                                         </connections>
                                                     </button>
@@ -562,6 +563,9 @@
                                                             <constraint firstAttribute="width" constant="125" id="Nd8-By-77j"/>
                                                         </constraints>
                                                         <state key="normal" backgroundImage="timeTrial-button.png"/>
+                                                        <connections>
+                                                            <action selector="multiplayerOnlineBtnPressed:" destination="VRe-6I-NiS" eventType="touchUpInside" id="wJm-bF-Qw9"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -580,7 +584,10 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="02F-cN-y9k"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="multiplayerLocalBtn" destination="yzK-ax-BjX" id="na9-1W-RMN"/>
+                        <outlet property="multiplayerOnlineBtn" destination="rG0-fI-LqR" id="0g8-22-98C"/>
                         <outlet property="timeAttackBtn" destination="Bep-aG-4GE" id="RcA-ub-2NN"/>
+                        <outlet property="timeTrialBtn" destination="fGi-g6-wAE" id="mSe-GR-a8W"/>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="GameViewController" id="tHA-BY-gqx"/>
                     </connections>
                 </viewController>
@@ -597,9 +604,9 @@
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.96470588239999999" green="0.85882352939999995" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.050980392159999999" green="0.19215686269999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <segue destination="MKh-B4-1yb" kind="show" identifier="gameoverSegue" id="VEG-2B-N8n"/>
@@ -618,14 +625,14 @@
                         <viewControllerLayoutGuide type="bottom" id="R72-ll-3sd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z5W-0v-GQK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-75-r63">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3H1-rv-cre">
-                                        <rect key="frame" x="20" y="285.5" width="335" height="95"/>
+                                        <rect key="frame" x="20" y="254" width="335" height="95"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="n9p-JD-TdR">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -673,7 +680,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.050980392156862744" green="0.19215686274509802" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.050980392159999999" green="0.19215686269999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="3H1-rv-cre" firstAttribute="leading" secondItem="X9U-75-r63" secondAttribute="leading" constant="20" id="DpP-oh-FxJ"/>
                                     <constraint firstAttribute="trailing" secondItem="3H1-rv-cre" secondAttribute="trailing" constant="20" id="R6X-Sz-RRM"/>
@@ -707,6 +714,6 @@
         <image name="timeattack-sign.png" width="2572" height="1023"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Dc-Qn-ztj"/>
+        <segue reference="fVG-ha-fR0"/>
     </inferredMetricsTieBreakers>
 </document>
