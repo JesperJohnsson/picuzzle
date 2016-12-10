@@ -80,6 +80,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 }
+let BG_GRAY = UIColor(red: 239.0 / 255, green: 239.0 / 255, blue: 239.0 / 255, alpha: 1.0)
+let BG_ORANGE = UIColor(red: 244.0 / 255, green: 109.0 / 255, blue: 41.0 / 255, alpha: 1.0)
+let BG_YELLOW = UIColor(red: 246.0 / 255, green: 219.0 / 255, blue: 124.0 / 255, alpha: 1.0)
+let BG_BLUE = UIColor(red: 13, green: 49, blue: 64, alpha: 1.0)
+let turkey = UIColor(red: 74.0, green: 195.0, blue: 201.0, alpha: 1.0)
+
 
 let ad = UIApplication.shared.delegate as! AppDelegate
 let context = ad.persistentContainer.viewContext

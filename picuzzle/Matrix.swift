@@ -22,9 +22,6 @@ func getElementSize()->Int{
 }
 let ELEMENT_WIDTH = getElementSize()
 let ELEMENT_HEIGHT = getElementSize()
-let BG_GRAY = UIColor(red: 239.0 / 255, green: 239.0 / 255, blue: 239.0 / 255, alpha: 1.0)
-let BG_ORANGE = UIColor(red: 244.0 / 255, green: 109.0 / 255, blue: 41.0 / 255, alpha: 1.0)
-let BG_YELLOW = UIColor(red: 246.0 / 255, green: 219.0 / 255, blue: 124.0 / 255, alpha: 1.0)
 
 class Matrix{
     var matrix: [[Element?]]

@@ -21,12 +21,6 @@ class ChooseModeViewController: UIViewController {
     @IBOutlet weak var localBtn: UIButton!
      */
     
-    @IBAction func timeAttackBtnPressed(_ sender: Any) {
-        print("KÖR")
-        performSegue(withIdentifier: "GameViewController", sender: "Time Attack")
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,19 +30,16 @@ class ChooseModeViewController: UIViewController {
         //multiplayerView.layer.cornerRadius = 10
         //onlineBtn.layer.cornerRadius = 10
         //localBtn.layer.cornerRadius = 10
-        
-        self.initiate()
     }
     
-    func initiate(){
-         self.view.backgroundColor = BG_YELLOW
+    @IBAction func timeAttackBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "GameViewController", sender: "Time Attack")
     }
-
     
     @IBAction func timeTrialBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "GameViewController", sender: "Time Trial")
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? GameViewController {
             
@@ -66,6 +57,4 @@ class ChooseModeViewController: UIViewController {
     func showNavigation() {
         self.navigationController?.navigationBar.isHidden = false
     }
-    
-
 }
