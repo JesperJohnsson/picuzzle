@@ -26,6 +26,7 @@
 		0B78AC271DEC468C00FA719D /* MultiplayerLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC261DEC468C00FA719D /* MultiplayerLocalViewController.swift */; };
 		0B78AC291DEC477F00FA719D /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC281DEC477F00FA719D /* LoadingScreenViewController.swift */; };
 		0B78AC2B1DEC4BBC00FA719D /* FinishedScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */; };
+		0BECEC5E1DFC6AF600394156 /* FinishedMultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BECEC5D1DFC6AF600394156 /* FinishedMultiplayerViewController.swift */; };
 		36C63CD6E1D5A6264C72ACC3 /* Pods_picuzzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74B5454E4D3AAFEB99106F /* Pods_picuzzle.framework */; };
 		A313BECB1DF5EFF000AFCD09 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A313BECA1DF5EFF000AFCD09 /* background.png */; };
 		A313BECE1DF5F7C500AFCD09 /* VCR-OSD-MONO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A313BECD1DF5F73300AFCD09 /* VCR-OSD-MONO.ttf */; };
@@ -113,6 +114,7 @@
 		0B78AC261DEC468C00FA719D /* MultiplayerLocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplayerLocalViewController.swift; sourceTree = "<group>"; };
 		0B78AC281DEC477F00FA719D /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedScreenViewController.swift; sourceTree = "<group>"; };
+		0BECEC5D1DFC6AF600394156 /* FinishedMultiplayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedMultiplayerViewController.swift; sourceTree = "<group>"; };
 		4A74B5454E4D3AAFEB99106F /* Pods_picuzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_picuzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CE8B4DCA7A5A7A7FBFD49D /* Pods-picuzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picuzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-picuzzle/Pods-picuzzle.release.xcconfig"; sourceTree = "<group>"; };
 		A313BECA1DF5EFF000AFCD09 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				0B4129891DF479F300DABE91 /* Picuzzle.xcdatamodeld */,
 				0B4129A41DF6F37900DABE91 /* GoogleService-Info.plist */,
 				0B4129A61DF7361300DABE91 /* SettingsViewController.swift */,
+				0BECEC5D1DFC6AF600394156 /* FinishedMultiplayerViewController.swift */,
 			);
 			path = picuzzle;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				0B78AC271DEC468C00FA719D /* MultiplayerLocalViewController.swift in Sources */,
 				0B78AC2B1DEC4BBC00FA719D /* FinishedScreenViewController.swift in Sources */,
 				0B71B5461DF1DC0400F399A4 /* ContentViewController.swift in Sources */,
+				0BECEC5E1DFC6AF600394156 /* FinishedMultiplayerViewController.swift in Sources */,
 				0B41299A1DF489F200DABE91 /* AAAScore+CoreDataClass.swift in Sources */,
 				0B6577AD1DDDDF7600DFE24E /* GameViewController.swift in Sources */,
 				0B4129AD1DF875C200DABE91 /* AAAScore+CoreDataProperties.swift in Sources */,
