@@ -49,6 +49,7 @@ class Matrix{
     func createElements(){
         var arr = [Element]()
         
+
         /*
         var count = (NR_OF_COLUMNS*NR_OF_ROWS) / 2
         
@@ -58,7 +59,7 @@ class Matrix{
             arr.append(Element(row: 0, column: 1, id: i, sp: String(i) + "_1.png"))
             arr.append(Element(row: 0, column: 1, id: i, sp: String(i) + "_2.png"))
         }*/
-        
+    
         arr.append(Element(row: 0, column: 1, id: 1, sp: "1_1.png"))
         arr.append(Element(row: 0, column: 1, id: 1, sp: "1_2.png"))
         
@@ -104,20 +105,6 @@ class Matrix{
         arr.append(Element(row: 0, column: 1, id: 15, sp: "7_1.png"))
         arr.append(Element(row: 0, column: 1, id: 15, sp: "7_2.png"))
         
-        arr.append(Element(row: 0, column: 1, id: 16, sp: "7_1.png"))
-        arr.append(Element(row: 0, column: 1, id: 16, sp: "7_2.png"))
-        
-        arr.append(Element(row: 0, column: 1, id: 17, sp: "7_1.png"))
-        arr.append(Element(row: 0, column: 1, id: 17, sp: "7_2.png"))
-        
-        arr.append(Element(row: 0, column: 1, id: 18, sp: "7_1.png"))
-        arr.append(Element(row: 0, column: 1, id: 18, sp: "7_2.png"))
-        
-        arr.append(Element(row: 0, column: 1, id: 19, sp: "7_1.png"))
-        arr.append(Element(row: 0, column: 1, id: 19, sp: "7_2.png"))
-        
-        arr.append(Element(row: 0, column: 1, id: 20, sp: "7_1.png"))
-        arr.append(Element(row: 0, column: 1, id: 20, sp: "7_2.png"))
         self.rangElementsRandom(arr: arr)
     }
     

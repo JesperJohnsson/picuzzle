@@ -84,7 +84,7 @@ class GameScene: SKScene {
     
     func setTimeAttackTimer(){
         /* TIDEN GÅR NER */
-        self.seconds = 10
+        self.seconds = 60
         label.text = String(self.seconds)
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameScene.counterDown), userInfo: nil, repeats: true)
     }
