@@ -11,6 +11,19 @@ import MultipeerConnectivity
 
 class LobbyViewController: UIViewController, MCSessionDelegate,MCBrowserViewControllerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    
+    @IBAction func testAct(_ sender: Any) {
+        print("************************")
+        print(self.mcSession.connectedPeers)
+        //print(self.peerID)
+        self.player1.text = self.peerID.displayName
+        self.player2.text = String(describing: self.mcSession.connectedPeers[0].displayName)
+    }
+    
+    
+    
+    @IBOutlet weak var player1: UILabel!
+    @IBOutlet weak var player2: UILabel!
     var peerID: MCPeerID!
     var mcSession: MCSession!
     var mcAdvertiserAssistant: MCAdvertiserAssistant!

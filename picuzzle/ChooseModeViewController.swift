@@ -57,7 +57,7 @@ class ChooseModeViewController: UIViewController, MCSessionDelegate,MCBrowserVie
         switch state {
         case MCSessionState.connected:
             print("Connected: \(peerID.displayName)")
-            performSegue(withIdentifier: "Lobby", sender: nil)
+            //performSegue(withIdentifier: "Lobby", sender: nil)
         case MCSessionState.connecting:
             print("Connecting: \(peerID.displayName)")
         case MCSessionState.notConnected:
