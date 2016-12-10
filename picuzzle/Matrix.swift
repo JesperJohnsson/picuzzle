@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-let NR_OF_COLUMNS = 5
+let NR_OF_COLUMNS = 4
 let NR_OF_ROWS = 6
 let DEVICE_SCREEN_SIZE = UIScreen.main.bounds
 func getElementSize()->Int{
@@ -18,7 +18,7 @@ func getElementSize()->Int{
     if(DEVICE_SCREEN_SIZE.height == 568 && DEVICE_SCREEN_SIZE.width == 320){
         return 50
     }
-    return 75
+    return Int(DEVICE_SCREEN_SIZE.width) / NR_OF_COLUMNS
 }
 let ELEMENT_WIDTH = getElementSize()
 let ELEMENT_HEIGHT = getElementSize()
