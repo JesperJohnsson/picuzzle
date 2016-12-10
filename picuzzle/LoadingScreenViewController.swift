@@ -10,9 +10,11 @@ import UIKit
 
 class LoadingScreenViewController: UIViewController {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        activityIndicator.startAnimating()
         
     }
 

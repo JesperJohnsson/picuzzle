@@ -99,7 +99,7 @@ class FinishedScreenViewController: UIViewController {
                 highscore.addScore(score: Score(value: Int(fetchedScores[s].value)))
             }
             
-            for i in 0..<4 {
+            for i in 0..<highscore.getCount() {
                 if(self.points > highscore.getScore(index: i).value){
                     print("NEW HIGHSCORE")
                     //print(i)

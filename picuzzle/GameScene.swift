@@ -19,7 +19,11 @@ class GameScene: SKScene {
     var seconds: Int
     var label: SKLabelNode
     var result: SKLabelNode
+    var userNameLabel: SKLabelNode
+    var divider: SKSpriteNode
     var mode: String
+    
+    let TIME_ATTACK_SECONDS = 30
     
     /* TEST VARIABLES*/
     var points: Int
@@ -44,20 +48,54 @@ class GameScene: SKScene {
         self.nrOfClicks = 0
         self.timer = Timer()
         self.seconds = 0
-        self.label = SKLabelNode(fontNamed:"Arial")
-        self.result = SKLabelNode(fontNamed:"Arial")
+        self.label = SKLabelNode(fontNamed:"VCR OSD Mono")
+        self.result = SKLabelNode(fontNamed:"VCR OSD Mono")
+        self.userNameLabel = SKLabelNode(fontNamed:"VCR OSD Mono")
+        self.divider = SKSpriteNode()
         
         super.init(size: size)
         
+        self.divider = SKSpriteNode(color: BG_DARK_BLUE, size: CGSize(width: self.frame.width * 2, height: 50))
+        self.divider.position = CGPoint(x:self.frame.minX, y:self.frame.maxY - 22)
+        self.divider.zPosition = 0
+        self.addChild(self.divider)
+    
+        self.divider = SKSpriteNode(color: BG_LIGHT_BLUE, size: CGSize(width: self.frame.width * 2, height: 10))
+        self.divider.position = CGPoint(x:self.frame.minX, y:self.frame.maxY - 50)
+        self.divider.zPosition = 0
+        self.addChild(self.divider)
+        
+        self.divider = SKSpriteNode(color: BG_DARK_BLUE, size: CGSize(width: self.frame.width * 2, height: 10))
+        self.divider.position = CGPoint(x:self.frame.minX, y:self.frame.minY + 50)
+        self.divider.zPosition = 0
+        self.addChild(self.divider)
+        
+        self.divider = SKSpriteNode(color: BG_LIGHT_BLUE, size: CGSize(width: self.frame.width * 2, height: 50))
+        self.divider.position = CGPoint(x:self.frame.minX, y:self.frame.minY + 22)
+        self.divider.zPosition = 0
+        self.addChild(self.divider)
+        
+        self.backgroundColor = UIColor.black
         self.label.text = "00.00";
-        self.label.fontSize = 45;
-        self.label.position = CGPoint(x:self.frame.midX, y:self.frame.maxY - 100);
+        self.label.fontSize = 30;
+        self.label.position = CGPoint(x:self.frame.maxX - 30, y:self.frame.maxY - 40);
         self.addChild(self.label)
         
-        self.result.text = String(self.points);
+        self.result.text = String(self.points) + "p"
         self.result.fontSize = 30;
-        self.result.position = CGPoint(x:self.frame.midX, y:self.frame.maxY - 50);
+        self.result.position = CGPoint(x:self.frame.minX + 30, y:self.frame.maxY - 40);
         self.addChild(self.result)
+        
+        let defaults = UserDefaults.standard
+        if let userName = defaults.string(forKey: "userNameKey") {
+            self.userNameLabel.text = userName
+        } else {
+            self.userNameLabel.text = "A man has no name"
+        }
+        
+        self.userNameLabel.fontSize = 15;
+        self.userNameLabel.position = CGPoint(x:self.frame.midX, y:self.frame.minY + 20);
+        self.addChild(self.userNameLabel)
     }
     
     func gameInitiate(mode: String){
@@ -75,7 +113,7 @@ class GameScene: SKScene {
     
     func setPoint(){
         self.points += 1
-        self.result.text = String(self.points)
+        self.result.text = String(self.points) + "p"
     }
     
     func getPoints()->Int{
@@ -83,14 +121,12 @@ class GameScene: SKScene {
     }
     
     func setTimeAttackTimer(){
-        /* TIDEN GÅR NER */
-        self.seconds = 10
+        self.seconds = TIME_ATTACK_SECONDS
         label.text = String(self.seconds)
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameScene.counterDown), userInfo: nil, repeats: true)
     }
     
     func setTimeTrialTimer(){
-        /* TIDEN GÅR NER */
         self.seconds = 0
         label.text = String(self.seconds)
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameScene.counterUp), userInfo: nil, repeats: true)
@@ -111,6 +147,7 @@ class GameScene: SKScene {
     
     func counterDown(){
         self.seconds -= 1
+        
         label.text = String(self.seconds)
         if(self.seconds == 0){
             self.timer.invalidate()
@@ -260,7 +297,7 @@ class GameScene: SKScene {
         var gamePosMiddleX = (ELEMENT_WIDTH * NR_OF_COLUMNS) / 2
         var gamePosMiddleY = (ELEMENT_HEIGHT * NR_OF_ROWS) / 2
         
-        var xPosition = Int(middle!.x) - gamePosMiddleX //125/2
+        var xPosition = Int(middle!.x) - gamePosMiddleX + 1 //125/2
         var yPosition = Int(middle!.y) + gamePosMiddleY //667
         
         
