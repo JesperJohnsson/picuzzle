@@ -52,6 +52,7 @@
 		A379C2F21DFC24D70035A74A /* 15_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A379C2E41DFC24D70035A74A /* 15_1.png */; };
 		A379C2F31DFC24D70035A74A /* 15_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A379C2E51DFC24D70035A74A /* 15_2.png */; };
 		A38B4F021DE22B980016B745 /* Grab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B4F011DE22B980016B745 /* Grab.swift */; };
+		A39571C81DFC88960021A506 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39571C71DFC88960021A506 /* LobbyViewController.swift */; };
 		A3A83B491DE62F6700382D43 /* GMScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A83B481DE62F6700382D43 /* GMScene.swift */; };
 		A3C1FB081DDE0F9E00D3AD8F /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1FB071DDE0F9E00D3AD8F /* Matrix.swift */; };
 		A3C1FB0A1DDE101700D3AD8F /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1FB091DDE101700D3AD8F /* Element.swift */; };
@@ -140,6 +141,7 @@
 		A379C2E41DFC24D70035A74A /* 15_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15_1.png; sourceTree = "<group>"; };
 		A379C2E51DFC24D70035A74A /* 15_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15_2.png; sourceTree = "<group>"; };
 		A38B4F011DE22B980016B745 /* Grab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grab.swift; sourceTree = "<group>"; };
+		A39571C71DFC88960021A506 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		A3A83B481DE62F6700382D43 /* GMScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMScene.swift; sourceTree = "<group>"; };
 		A3C1FB071DDE0F9E00D3AD8F /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		A3C1FB091DDE101700D3AD8F /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				0B6577A41DDDDF7600DFE24E /* AppDelegate.swift */,
 				A313BECF1DF5FC0400AFCD09 /* Fonts */,
 				0B6577AA1DDDDF7600DFE24E /* GameScene.swift */,
+				A39571C71DFC88960021A506 /* LobbyViewController.swift */,
 				A3A83B481DE62F6700382D43 /* GMScene.swift */,
 				A3C1FB111DDE181200D3AD8F /* IndexViewController.swift */,
 				0B6577AC1DDDDF7600DFE24E /* GameViewController.swift */,
@@ -431,6 +434,7 @@
 				TargetAttributes = {
 					0B6577A01DDDDF7600DFE24E = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ZYR4LS2CV4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -583,6 +587,7 @@
 				0B78AC271DEC468C00FA719D /* MultiplayerLocalViewController.swift in Sources */,
 				0B78AC2B1DEC4BBC00FA719D /* FinishedScreenViewController.swift in Sources */,
 				0B71B5461DF1DC0400F399A4 /* ContentViewController.swift in Sources */,
+				A39571C81DFC88960021A506 /* LobbyViewController.swift in Sources */,
 				0B41299A1DF489F200DABE91 /* AAAScore+CoreDataClass.swift in Sources */,
 				0B6577AD1DDDDF7600DFE24E /* GameViewController.swift in Sources */,
 				0B4129AD1DF875C200DABE91 /* AAAScore+CoreDataProperties.swift in Sources */,
@@ -720,9 +725,10 @@
 			baseConfigurationReference = D9DEC8E33BA5CF8DF386CD5F /* Pods-picuzzle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZYR4LS2CV4;
 				INFOPLIST_FILE = picuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = development.picuzzle;
+				PRODUCT_BUNDLE_IDENTIFIER = Cantis.picuzzles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -733,9 +739,10 @@
 			baseConfigurationReference = 71CE8B4DCA7A5A7A7FBFD49D /* Pods-picuzzle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZYR4LS2CV4;
 				INFOPLIST_FILE = picuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = development.picuzzle;
+				PRODUCT_BUNDLE_IDENTIFIER = Cantis.picuzzles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
