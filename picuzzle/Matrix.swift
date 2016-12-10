@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-let NR_OF_COLUMNS = 5
-let NR_OF_ROWS = 3
+let NR_OF_COLUMNS = 4
+let NR_OF_ROWS = 6
 let DEVICE_SCREEN_SIZE = UIScreen.main.bounds
 func getElementSize()->Int{
     print("DEVICE HEIGHT: " + String(describing: DEVICE_SCREEN_SIZE.size.height))
@@ -18,13 +18,10 @@ func getElementSize()->Int{
     if(DEVICE_SCREEN_SIZE.height == 568 && DEVICE_SCREEN_SIZE.width == 320){
         return 50
     }
-    return 75
+    return Int(DEVICE_SCREEN_SIZE.width) / NR_OF_COLUMNS
 }
 let ELEMENT_WIDTH = getElementSize()
 let ELEMENT_HEIGHT = getElementSize()
-let BG_GRAY = UIColor(red: 239.0 / 255, green: 239.0 / 255, blue: 239.0 / 255, alpha: 1.0)
-let BG_ORANGE = UIColor(red: 244.0 / 255, green: 109.0 / 255, blue: 41.0 / 255, alpha: 1.0)
-let BG_YELLOW = UIColor(red: 246.0 / 255, green: 219.0 / 255, blue: 124.0 / 255, alpha: 1.0)
 
 class Matrix{
     var matrix: [[Element?]]
@@ -52,6 +49,7 @@ class Matrix{
     func createElements(){
         var arr = [Element]()
         
+
         /*
         var count = (NR_OF_COLUMNS*NR_OF_ROWS) / 2
         
@@ -61,7 +59,7 @@ class Matrix{
             arr.append(Element(row: 0, column: 1, id: i, sp: String(i) + "_1.png"))
             arr.append(Element(row: 0, column: 1, id: i, sp: String(i) + "_2.png"))
         }*/
-        
+    
         arr.append(Element(row: 0, column: 1, id: 1, sp: "1_1.png"))
         arr.append(Element(row: 0, column: 1, id: 1, sp: "1_2.png"))
         
@@ -85,6 +83,19 @@ class Matrix{
         
         arr.append(Element(row: 0, column: 1, id: 8, sp: "8_1.png"))
         arr.append(Element(row: 0, column: 1, id: 8, sp: "8_2.png"))
+        
+        arr.append(Element(row: 0, column: 1, id: 9, sp: "1_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 9, sp: "1_2.png"))
+        
+        arr.append(Element(row: 0, column: 1, id: 10, sp: "2_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 10, sp: "2_2.png"))
+        
+        arr.append(Element(row: 0, column: 1, id: 11, sp: "3_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 11, sp: "3_2.png"))
+        
+        arr.append(Element(row: 0, column: 1, id: 12, sp: "4_1.png"))
+        arr.append(Element(row: 0, column: 1, id: 12, sp: "4_2.png"))
+        
         self.rangElementsRandom(arr: arr)
     }
     
