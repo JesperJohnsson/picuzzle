@@ -71,10 +71,11 @@ class ContentViewController: UIViewController {
             
             for i in 0..<fetchedScores.count {
                 let correctIndex = i + 1
-                let userName = fetchedScores[i].userName
+                var userName = fetchedScores[i].userName
                 let score = String(fetchedScores[i].value)
                 let currentStackView = highscoreList.subviews[i]
             
+                if(userName == nil){userName = "-"}
                 let firstPart = currentStackView.subviews[0] as! UILabel
                 firstPart.text = "\(correctIndex). \(userName!)"
                 let secondPart = currentStackView.subviews[1] as! UILabel
