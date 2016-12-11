@@ -8,5 +8,8 @@ target 'picuzzle' do
   # Pods for picuzzle
   pod ’Firebase/Core’
   pod ’Firebase/Database’
+  pod ’FacebookCore’
+  pod ’FacebookLogin’
+  pod ’FacebookShare’
 
 end

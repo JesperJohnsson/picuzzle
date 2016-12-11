@@ -1,6 +1,7 @@
 import UIKit
 import CoreData
-
+import FacebookCore
+import FacebookLogin
 
 enum UIUserInterfaceIdiom : Int {
     case Unspecified
@@ -18,16 +19,24 @@ class IndexViewController: UIViewController {
     
     let defaults = UserDefaults.standard
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*if(UIDevice.current.userInterfaceIdiom == .phone){
-            print("IPHONE")
-        }*/
+        if let accessToken = AccessToken.current {
+            print(accessToken)
+            print("accessToken is sets")
+        }
         
-        if let userName = defaults.string(forKey: "userNameKey") {
+        let loginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends ])
+        loginButton.center = view.center
+        view.addSubview(loginButton)
+        
+        
+        /*if let userName = defaults.string(forKey: "userNameKey") {
             setUserNameInformation(name: userName)
-            insertNameTxtFld.isHidden = true
+            insertNameTxtFld.isHidden = false
             playBtn.isHidden = false
             highscoreBtn.isHidden = false
             settingsBtn.isHidden = false
@@ -35,7 +44,11 @@ class IndexViewController: UIViewController {
             playBtn.isHidden = true
             highscoreBtn.isHidden = true
             settingsBtn.isHidden = true
-        }
+        }*/
+        
+        playBtn.isHidden = true
+        highscoreBtn.isHidden = true
+        settingsBtn.isHidden = true
     
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "background.png")
@@ -49,7 +62,7 @@ class IndexViewController: UIViewController {
             print("Internet connection FAILED")
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
