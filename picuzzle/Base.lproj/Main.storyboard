@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lav-yH-L9i">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lav-yH-L9i">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -333,6 +333,21 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connection?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WL-m1-liz">
+                                        <rect key="frame" x="133" y="119" width="123" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d16-dx-D7n">
+                                        <rect key="frame" x="141" y="184" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendMessage:" destination="D1S-hh-S3J" eventType="touchUpInside" id="dZx-Xd-hsT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.19215686269999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -352,6 +367,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="B9I-pc-d1s" id="S0q-cc-T0w"/>
+                        <outlet property="connectionState" destination="4WL-m1-liz" id="WmC-uc-soy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWH-lq-1vr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -563,6 +579,7 @@
                                                         </constraints>
                                                         <state key="normal" backgroundImage="multiplayer-badge.png"/>
                                                         <connections>
+                                                            <action selector="multiOnlineAction:" destination="VRe-6I-NiS" eventType="touchUpInside" id="70A-te-aHm"/>
                                                             <action selector="multiplayerOnlineBtnPressed:" destination="VRe-6I-NiS" eventType="touchUpInside" id="wJm-bF-Qw9"/>
                                                         </connections>
                                                     </button>
@@ -588,11 +605,80 @@
                         <outlet property="timeAttackBtn" destination="Bep-aG-4GE" id="RcA-ub-2NN"/>
                         <outlet property="timeTrialBtn" destination="fGi-g6-wAE" id="mSe-GR-a8W"/>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="GameViewController" id="tHA-BY-gqx"/>
+                        <segue destination="pJT-wS-WVG" kind="show" identifier="Lobby" id="QwW-vG-tMY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfx-06-wTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1303.2" y="35.532233883058474"/>
+        </scene>
+        <!--Lobby View Controller-->
+        <scene sceneID="eIF-ex-I3c">
+            <objects>
+                <viewController id="pJT-wS-WVG" customClass="LobbyViewController" customModule="picuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H2B-wK-FnM"/>
+                        <viewControllerLayoutGuide type="bottom" id="DJi-Jg-lJl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3qW-P1-jjz">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxq-sM-J1F">
+                                <rect key="frame" x="82" y="286" width="211" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send message"/>
+                                <connections>
+                                    <action selector="sendMessageAction:" destination="pJT-wS-WVG" eventType="touchUpInside" id="sEx-H5-eFY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwC-I8-jGC">
+                                <rect key="frame" x="82" y="348" width="158" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxS-K3-Iqn">
+                                <rect key="frame" x="38" y="391" width="317" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDm-RT-CHM">
+                                <rect key="frame" x="20" y="447" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.89869350189999997" green="0.4189298749" blue="0.1870625615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7MH-U4-eME"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="25"/>
+                                <state key="normal" title="START GAME">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk0-SH-7vm">
+                                <rect key="frame" x="164" y="158" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testAct:" destination="pJT-wS-WVG" eventType="touchUpInside" id="FKg-ag-fc0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="player1" destination="uwC-I8-jGC" id="ZQl-Ap-zeo"/>
+                        <outlet property="player2" destination="VxS-K3-Iqn" id="x4S-QD-GWU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Chm-mo-qzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423.19999999999999" y="35.532233883058474"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">

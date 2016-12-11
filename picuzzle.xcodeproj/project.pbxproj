@@ -28,6 +28,7 @@
 		0B78AC2B1DEC4BBC00FA719D /* FinishedScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */; };
 		0BECEC5E1DFC6AF600394156 /* FinishedMultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BECEC5D1DFC6AF600394156 /* FinishedMultiplayerViewController.swift */; };
 		36C63CD6E1D5A6264C72ACC3 /* Pods_picuzzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74B5454E4D3AAFEB99106F /* Pods_picuzzle.framework */; };
+		A30AF3AF1DFD626300677113 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30AF3AE1DFD626300677113 /* Message.swift */; };
 		A313BECB1DF5EFF000AFCD09 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A313BECA1DF5EFF000AFCD09 /* background.png */; };
 		A313BECE1DF5F7C500AFCD09 /* VCR-OSD-MONO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A313BECD1DF5F73300AFCD09 /* VCR-OSD-MONO.ttf */; };
 		A3381E321DF733740009D75F /* TA-BRONZE-medal.png in Resources */ = {isa = PBXBuildFile; fileRef = A3381E2F1DF733740009D75F /* TA-BRONZE-medal.png */; };
@@ -53,6 +54,7 @@
 		A379C2F21DFC24D70035A74A /* 15_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A379C2E41DFC24D70035A74A /* 15_1.png */; };
 		A379C2F31DFC24D70035A74A /* 15_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A379C2E51DFC24D70035A74A /* 15_2.png */; };
 		A38B4F021DE22B980016B745 /* Grab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B4F011DE22B980016B745 /* Grab.swift */; };
+		A39571C81DFC88960021A506 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39571C71DFC88960021A506 /* LobbyViewController.swift */; };
 		A3A83B491DE62F6700382D43 /* GMScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A83B481DE62F6700382D43 /* GMScene.swift */; };
 		A3C1FB081DDE0F9E00D3AD8F /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1FB071DDE0F9E00D3AD8F /* Matrix.swift */; };
 		A3C1FB0A1DDE101700D3AD8F /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1FB091DDE101700D3AD8F /* Element.swift */; };
@@ -117,6 +119,7 @@
 		0BECEC5D1DFC6AF600394156 /* FinishedMultiplayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedMultiplayerViewController.swift; sourceTree = "<group>"; };
 		4A74B5454E4D3AAFEB99106F /* Pods_picuzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_picuzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CE8B4DCA7A5A7A7FBFD49D /* Pods-picuzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picuzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-picuzzle/Pods-picuzzle.release.xcconfig"; sourceTree = "<group>"; };
+		A30AF3AE1DFD626300677113 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A313BECA1DF5EFF000AFCD09 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		A313BECD1DF5F73300AFCD09 /* VCR-OSD-MONO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VCR-OSD-MONO.ttf"; sourceTree = "<group>"; };
 		A3381E2F1DF733740009D75F /* TA-BRONZE-medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TA-BRONZE-medal.png"; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 		A379C2E41DFC24D70035A74A /* 15_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15_1.png; sourceTree = "<group>"; };
 		A379C2E51DFC24D70035A74A /* 15_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15_2.png; sourceTree = "<group>"; };
 		A38B4F011DE22B980016B745 /* Grab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grab.swift; sourceTree = "<group>"; };
+		A39571C71DFC88960021A506 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		A3A83B481DE62F6700382D43 /* GMScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMScene.swift; sourceTree = "<group>"; };
 		A3C1FB071DDE0F9E00D3AD8F /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		A3C1FB091DDE101700D3AD8F /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 				0B6577A41DDDDF7600DFE24E /* AppDelegate.swift */,
 				A313BECF1DF5FC0400AFCD09 /* Fonts */,
 				0B6577AA1DDDDF7600DFE24E /* GameScene.swift */,
+				A30AF3AE1DFD626300677113 /* Message.swift */,
+				A39571C71DFC88960021A506 /* LobbyViewController.swift */,
 				A3A83B481DE62F6700382D43 /* GMScene.swift */,
 				A3C1FB111DDE181200D3AD8F /* IndexViewController.swift */,
 				0B6577AC1DDDDF7600DFE24E /* GameViewController.swift */,
@@ -434,6 +440,7 @@
 				TargetAttributes = {
 					0B6577A01DDDDF7600DFE24E = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ZYR4LS2CV4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -586,6 +593,7 @@
 				0B78AC271DEC468C00FA719D /* MultiplayerLocalViewController.swift in Sources */,
 				0B78AC2B1DEC4BBC00FA719D /* FinishedScreenViewController.swift in Sources */,
 				0B71B5461DF1DC0400F399A4 /* ContentViewController.swift in Sources */,
+				A39571C81DFC88960021A506 /* LobbyViewController.swift in Sources */,
 				0BECEC5E1DFC6AF600394156 /* FinishedMultiplayerViewController.swift in Sources */,
 				0B41299A1DF489F200DABE91 /* AAAScore+CoreDataClass.swift in Sources */,
 				0B6577AD1DDDDF7600DFE24E /* GameViewController.swift in Sources */,
@@ -596,6 +604,7 @@
 				A3C1FB0A1DDE101700D3AD8F /* Element.swift in Sources */,
 				A3D51B031DF6B9F0000F0182 /* Reachability.swift in Sources */,
 				A3C1FB121DDE181200D3AD8F /* IndexViewController.swift in Sources */,
+				A30AF3AF1DFD626300677113 /* Message.swift in Sources */,
 				0B321D721DE2254300704BF9 /* HighscoreViewController.swift in Sources */,
 				0B78AC291DEC477F00FA719D /* LoadingScreenViewController.swift in Sources */,
 				0B78AC251DEC2F7F00FA719D /* ChooseModeViewController.swift in Sources */,
@@ -724,9 +733,10 @@
 			baseConfigurationReference = D9DEC8E33BA5CF8DF386CD5F /* Pods-picuzzle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZYR4LS2CV4;
 				INFOPLIST_FILE = picuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = development.picuzzle;
+				PRODUCT_BUNDLE_IDENTIFIER = Cantis.picuzzles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -737,9 +747,10 @@
 			baseConfigurationReference = 71CE8B4DCA7A5A7A7FBFD49D /* Pods-picuzzle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZYR4LS2CV4;
 				INFOPLIST_FILE = picuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = development.picuzzle;
+				PRODUCT_BUNDLE_IDENTIFIER = Cantis.picuzzles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
