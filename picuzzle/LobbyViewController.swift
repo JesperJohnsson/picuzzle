@@ -14,16 +14,40 @@ class LobbyViewController: UIViewController, MCSessionDelegate,MCBrowserViewCont
     
     @IBAction func testAct(_ sender: Any) {
         print("************************")
-        print(self.mcSession.connectedPeers)
-        //print(self.peerID)
-        self.player1.text = self.peerID.displayName
-        self.player2.text = String(describing: self.mcSession.connectedPeers[0].displayName)
+        //print(self.mcSession.connectedPeers)
+        //self.test = "dsa"
+        //self.messageCl.setMessage(message: "bajskorv")
+        print(self.messageCl?.getMessage())
+        
+        //self.player1.text = self.peerID.displayName
+        //self.player2.text = String(describing: self.mcSession.connectedPeers[0].displayName)
     }
-    
-    
     
     @IBOutlet weak var player1: UILabel!
     @IBOutlet weak var player2: UILabel!
+    
+    var messageCl: Message?{
+        willSet(newValue){
+            print("--------------JAPP--------------------")
+            print(newValue)
+        }
+        didSet{
+            print("fuckt his shit")
+        }
+    }
+    
+    var test: String?{
+        willSet(newValue) {
+            print("--------------NYTT VÄRDE--------------------")
+            print(newValue)
+        }
+        didSet{
+            print("--------------OLD VÄRDE--------------------")
+            print(oldValue)
+        }
+    }
+    
+    
     var peerID: MCPeerID!
     var mcSession: MCSession!
     var mcAdvertiserAssistant: MCAdvertiserAssistant!
@@ -35,7 +59,20 @@ class LobbyViewController: UIViewController, MCSessionDelegate,MCBrowserViewCont
     
     override func viewDidLoad() {
     super.viewDidLoad()
+        let observerKeyLocation = "message"
+        //self.messageCl.message.addObserver(self, forKeyPath: observerKeyLocation, options: .new, context: nil)
+        var mes = self.messageCl?.copy() as! Message
+        self.messageCl = Message()
+        self.messageCl = mes
+    }
     
+    func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutableRawPointer) {
+        print("-------------------------------")
+        print("JAPPPP")
+        let observerKeyLocation = "message"
+        if keyPath == observerKeyLocation {
+            print("HEJEJJJEJEJEJEJE")
+        }
     }
     
     /* START SESSION */

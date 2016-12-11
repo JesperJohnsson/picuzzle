@@ -27,6 +27,7 @@
 		0B78AC291DEC477F00FA719D /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC281DEC477F00FA719D /* LoadingScreenViewController.swift */; };
 		0B78AC2B1DEC4BBC00FA719D /* FinishedScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */; };
 		36C63CD6E1D5A6264C72ACC3 /* Pods_picuzzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74B5454E4D3AAFEB99106F /* Pods_picuzzle.framework */; };
+		A30AF3AF1DFD626300677113 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30AF3AE1DFD626300677113 /* Message.swift */; };
 		A313BECB1DF5EFF000AFCD09 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A313BECA1DF5EFF000AFCD09 /* background.png */; };
 		A313BECE1DF5F7C500AFCD09 /* VCR-OSD-MONO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A313BECD1DF5F73300AFCD09 /* VCR-OSD-MONO.ttf */; };
 		A3381E321DF733740009D75F /* TA-BRONZE-medal.png in Resources */ = {isa = PBXBuildFile; fileRef = A3381E2F1DF733740009D75F /* TA-BRONZE-medal.png */; };
@@ -116,6 +117,7 @@
 		0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedScreenViewController.swift; sourceTree = "<group>"; };
 		4A74B5454E4D3AAFEB99106F /* Pods_picuzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_picuzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CE8B4DCA7A5A7A7FBFD49D /* Pods-picuzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picuzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-picuzzle/Pods-picuzzle.release.xcconfig"; sourceTree = "<group>"; };
+		A30AF3AE1DFD626300677113 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A313BECA1DF5EFF000AFCD09 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		A313BECD1DF5F73300AFCD09 /* VCR-OSD-MONO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VCR-OSD-MONO.ttf"; sourceTree = "<group>"; };
 		A3381E2F1DF733740009D75F /* TA-BRONZE-medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TA-BRONZE-medal.png"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				0B6577A41DDDDF7600DFE24E /* AppDelegate.swift */,
 				A313BECF1DF5FC0400AFCD09 /* Fonts */,
 				0B6577AA1DDDDF7600DFE24E /* GameScene.swift */,
+				A30AF3AE1DFD626300677113 /* Message.swift */,
 				A39571C71DFC88960021A506 /* LobbyViewController.swift */,
 				A3A83B481DE62F6700382D43 /* GMScene.swift */,
 				A3C1FB111DDE181200D3AD8F /* IndexViewController.swift */,
@@ -597,6 +600,7 @@
 				A3C1FB0A1DDE101700D3AD8F /* Element.swift in Sources */,
 				A3D51B031DF6B9F0000F0182 /* Reachability.swift in Sources */,
 				A3C1FB121DDE181200D3AD8F /* IndexViewController.swift in Sources */,
+				A30AF3AF1DFD626300677113 /* Message.swift in Sources */,
 				0B321D721DE2254300704BF9 /* HighscoreViewController.swift in Sources */,
 				0B78AC291DEC477F00FA719D /* LoadingScreenViewController.swift in Sources */,
 				0B78AC251DEC2F7F00FA719D /* ChooseModeViewController.swift in Sources */,

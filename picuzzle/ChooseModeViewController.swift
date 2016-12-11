@@ -15,6 +15,8 @@ class ChooseModeViewController: UIViewController, MCSessionDelegate,MCBrowserVie
     var mcSession: MCSession!
     var mcAdvertiserAssistant: MCAdvertiserAssistant!
     
+    var messageCl: Message!
+    
     @IBOutlet weak var timeAttackBtn: UIButton!
     @IBOutlet weak var timeTrialBtn: UIButton!
     @IBOutlet weak var multiplayerLocalBtn: UIButton!
@@ -29,6 +31,7 @@ class ChooseModeViewController: UIViewController, MCSessionDelegate,MCBrowserVie
         peerID = MCPeerID(displayName: UIDevice.current.name)
         mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .optional)
         mcSession.delegate = self
+        self.messageCl = Message()
 
     }
     
@@ -56,7 +59,8 @@ class ChooseModeViewController: UIViewController, MCSessionDelegate,MCBrowserVie
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
         case MCSessionState.connected:
-            print("Connected: \(peerID.displayName)")
+            print("Connecteds: \(peerID.displayName)")
+            self.messageCl.setMessage(message: "Evert")
             //performSegue(withIdentifier: "Lobby", sender: nil)
         case MCSessionState.connecting:
             print("Connecting: \(peerID.displayName)")
@@ -127,6 +131,8 @@ class ChooseModeViewController: UIViewController, MCSessionDelegate,MCBrowserVie
             destination.peerID = self.peerID
             destination.mcSession = self.mcSession
             destination.mcAdvertiserAssistant = self.mcAdvertiserAssistant
+            destination.messageCl = self.messageCl
+            destination.test = "dasd"
             
         }
     }
