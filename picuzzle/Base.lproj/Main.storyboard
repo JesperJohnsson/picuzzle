@@ -21,7 +21,7 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="krq-ny-9rH" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1tp-fn-1N2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4414" y="796"/>
+            <point key="canvasLocation" x="-4414" y="797"/>
         </scene>
         <!--Content View Controller-->
         <scene sceneID="DVQ-Ns-UYw">
@@ -178,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1h-iA-y1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3618" y="795"/>
+            <point key="canvasLocation" x="-3617" y="796"/>
         </scene>
         <!--HIGHSCORE-->
         <scene sceneID="ID1-yK-NLl">
@@ -266,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O96-B7-Vxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2103.1999999999998" y="794.75262368815595"/>
+            <point key="canvasLocation" x="-2103" y="797"/>
         </scene>
         <!--Loading Screen View Controller-->
         <scene sceneID="Ixv-BX-Adk">
@@ -372,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWH-lq-1vr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1303.2" y="790.25487256371821"/>
+            <point key="canvasLocation" x="316" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Qm-6d-5dV">
@@ -536,7 +536,7 @@
                                                     <constraint firstAttribute="width" constant="125" id="75z-BR-19B"/>
                                                     <constraint firstAttribute="height" constant="125" id="qvA-k6-CNT"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="timeAttack-button.png"/>
+                                                <state key="normal" backgroundImage="sword-badge.png"/>
                                                 <connections>
                                                     <action selector="timeAttackBtnPressed:" destination="VRe-6I-NiS" eventType="touchUpInside" id="sh1-9y-fBV"/>
                                                 </connections>
@@ -547,7 +547,7 @@
                                                     <constraint firstAttribute="height" constant="125" id="2ef-c2-2Kq"/>
                                                     <constraint firstAttribute="width" constant="125" id="Jdg-Ak-EqC"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="timeTrial-button.png"/>
+                                                <state key="normal" backgroundImage="clock-badge.png"/>
                                                 <connections>
                                                     <action selector="timeTrialBtnPressed:" destination="VRe-6I-NiS" eventType="touchUpInside" id="EfW-4f-Tja"/>
                                                 </connections>
@@ -566,7 +566,7 @@
                                                             <constraint firstAttribute="width" constant="125" id="3iU-Kf-Ted"/>
                                                             <constraint firstAttribute="height" constant="125" id="cik-sR-Mf5"/>
                                                         </constraints>
-                                                        <state key="normal" backgroundImage="timeAttack-button.png"/>
+                                                        <state key="normal" backgroundImage="multiplayer-badge.png"/>
                                                         <connections>
                                                             <action selector="multiplayerLocalBtnPressed:" destination="VRe-6I-NiS" eventType="touchUpInside" id="fKo-gf-DX6"/>
                                                         </connections>
@@ -577,7 +577,7 @@
                                                             <constraint firstAttribute="height" constant="125" id="6cJ-Up-Sw3"/>
                                                             <constraint firstAttribute="width" constant="125" id="Nd8-By-77j"/>
                                                         </constraints>
-                                                        <state key="normal" backgroundImage="timeTrial-button.png"/>
+                                                        <state key="normal" backgroundImage="multiplayer-badge.png"/>
                                                         <connections>
                                                             <action selector="multiOnlineAction:" destination="VRe-6I-NiS" eventType="touchUpInside" id="70A-te-aHm"/>
                                                             <action selector="multiplayerOnlineBtnPressed:" destination="VRe-6I-NiS" eventType="touchUpInside" id="wJm-bF-Qw9"/>
@@ -695,11 +695,12 @@
                     </view>
                     <connections>
                         <segue destination="MKh-B4-1yb" kind="show" identifier="gameoverSegue" id="VEG-2B-N8n"/>
+                        <segue destination="89F-6g-OZQ" kind="show" id="VHW-jW-rh5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-518" y="790"/>
+            <point key="canvasLocation" x="-1303" y="797"/>
         </scene>
         <!--Finished Screen View Controller-->
         <scene sceneID="A88-eK-yFo">
@@ -755,22 +756,27 @@
                                                 <connections>
                                                     <action selector="abortBtnPressed:" destination="D1S-hh-S3J" eventType="touchUpInside" id="xk9-1s-PNv"/>
                                                     <action selector="backBtnPressed:" destination="MKh-B4-1yb" eventType="touchUpInside" id="SZJ-os-LXk"/>
-                                                    <segue destination="0t4-mT-HD8" kind="show" id="4Dc-Qn-ztj"/>
+                                                    <segue destination="0t4-mT-HD8" kind="show" id="P6p-1h-6TN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tp5-4Y-eX5">
-                                        <rect key="frame" x="120" y="125" width="135" height="135"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TA-gold-medal.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tp5-4Y-eX5">
+                                        <rect key="frame" x="120" y="125" width="135" height="103"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="aJf-qX-kaf"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.19215686269999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Tp5-4Y-eX5" firstAttribute="top" secondItem="X9U-75-r63" secondAttribute="top" constant="125" id="DW4-ww-lFP"/>
                                     <constraint firstItem="3H1-rv-cre" firstAttribute="leading" secondItem="X9U-75-r63" secondAttribute="leading" constant="20" id="DpP-oh-FxJ"/>
                                     <constraint firstAttribute="trailing" secondItem="3H1-rv-cre" secondAttribute="trailing" constant="20" id="R6X-Sz-RRM"/>
                                     <constraint firstItem="3H1-rv-cre" firstAttribute="centerX" secondItem="X9U-75-r63" secondAttribute="centerX" id="bXa-Z2-sII"/>
+                                    <constraint firstItem="3H1-rv-cre" firstAttribute="top" secondItem="Tp5-4Y-eX5" secondAttribute="bottom" constant="26" id="cOs-pM-kvA"/>
                                     <constraint firstItem="3H1-rv-cre" firstAttribute="centerY" secondItem="X9U-75-r63" secondAttribute="centerY" id="hBM-hT-nAk"/>
+                                    <constraint firstItem="Tp5-4Y-eX5" firstAttribute="centerX" secondItem="X9U-75-r63" secondAttribute="centerX" id="w8e-dR-xxi"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -790,13 +796,157 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grQ-bu-G75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="316" y="790.25487256371821"/>
+            <point key="canvasLocation" x="-468" y="797"/>
+        </scene>
+        <!--Finished Multiplayer View Controller-->
+        <scene sceneID="QgG-rR-Czn">
+            <objects>
+                <viewController id="89F-6g-OZQ" customClass="FinishedMultiplayerViewController" customModule="picuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bMG-ND-IMv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z2o-UD-tN3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZYy-zn-iql">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EsF-Je-xLV" userLabel="Player 1">
+                                <rect key="frame" x="16" y="408" width="343" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO4-UG-UnN">
+                                        <rect key="frame" x="142" y="0.0" width="59" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="C5u-eI-ei4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dennis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oN-oo-Qys">
+                                        <rect key="frame" x="138" y="55" width="67" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="nIO-7J-307"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3g9-u4-dg4" userLabel="Player 2">
+                                <rect key="frame" x="16" y="105" width="343" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdk-dt-7gF">
+                                        <rect key="frame" x="142" y="0.0" width="59" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="EA0-Qb-yi4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yI-6y-rEX">
+                                        <rect key="frame" x="138" y="55" width="67" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="iea-JO-RrP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winner-medal.png" translatesAutoresizingMaskIntoConstraints="NO" id="JPM-qr-S1W">
+                                <rect key="frame" x="62" y="251.5" width="250" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="cmC-4C-d8B"/>
+                                    <constraint firstAttribute="width" constant="250" id="zSm-ox-gJ9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesper wants a rematch!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7An-yg-QFq">
+                                <rect key="frame" x="16" y="16" width="343" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fvU-aL-z0Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="F88-OP-3hk">
+                                <rect key="frame" x="16" y="544" width="343" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9u-PF-O0W">
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="34"/>
+                                        <color key="backgroundColor" red="0.2901960784" green="0.76470588240000004" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="25"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="abortBtnPressed:" destination="D1S-hh-S3J" eventType="touchUpInside" id="0np-Ay-nAs"/>
+                                            <action selector="backBtnPressed:" destination="MKh-B4-1yb" eventType="touchUpInside" id="MXB-70-0An"/>
+                                            <action selector="backBtnPressed:" destination="89F-6g-OZQ" eventType="touchUpInside" id="gbB-cd-whP"/>
+                                            <segue destination="0t4-mT-HD8" kind="show" id="JjC-vT-gPj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJ8-lR-sXq">
+                                        <rect key="frame" x="179.5" y="0.0" width="163.5" height="34"/>
+                                        <color key="backgroundColor" red="0.2901960784" green="0.76470588240000004" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="25"/>
+                                        <state key="normal" title="Rematch">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="abortBtnPressed:" destination="D1S-hh-S3J" eventType="touchUpInside" id="cOo-1o-Dr0"/>
+                                            <action selector="backBtnPressed:" destination="MKh-B4-1yb" eventType="touchUpInside" id="x04-Pr-cjY"/>
+                                            <action selector="rematchBtnPressed:" destination="89F-6g-OZQ" eventType="touchUpInside" id="8NL-5w-1yb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.050980392159999999" green="0.19215686269999999" blue="0.26178156670000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7An-yg-QFq" firstAttribute="top" secondItem="bMG-ND-IMv" secondAttribute="bottom" constant="16" id="0yb-cq-mjv"/>
+                            <constraint firstItem="3g9-u4-dg4" firstAttribute="leading" secondItem="ZYy-zn-iql" secondAttribute="leadingMargin" id="2z1-2Z-4qz"/>
+                            <constraint firstItem="Z2o-UD-tN3" firstAttribute="top" secondItem="F88-OP-3hk" secondAttribute="bottom" constant="25" id="3A4-mY-6cU"/>
+                            <constraint firstAttribute="trailing" secondItem="7An-yg-QFq" secondAttribute="trailing" constant="16" id="3F1-t1-bcC"/>
+                            <constraint firstItem="7An-yg-QFq" firstAttribute="leading" secondItem="ZYy-zn-iql" secondAttribute="leading" constant="16" id="3td-mW-1DP"/>
+                            <constraint firstItem="3g9-u4-dg4" firstAttribute="top" secondItem="bMG-ND-IMv" secondAttribute="bottom" constant="105" id="BJC-D3-Lqa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F88-OP-3hk" secondAttribute="trailing" id="HnR-CW-xRn"/>
+                            <constraint firstItem="Z2o-UD-tN3" firstAttribute="top" secondItem="EsF-Je-xLV" secondAttribute="bottom" constant="125" id="NnD-qS-GdJ"/>
+                            <constraint firstItem="EsF-Je-xLV" firstAttribute="leading" secondItem="ZYy-zn-iql" secondAttribute="leadingMargin" id="ONb-DK-w7V"/>
+                            <constraint firstItem="EsF-Je-xLV" firstAttribute="centerX" secondItem="ZYy-zn-iql" secondAttribute="centerX" id="Q2v-Ep-mH5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3g9-u4-dg4" secondAttribute="trailing" id="T3U-4c-CIf"/>
+                            <constraint firstItem="3g9-u4-dg4" firstAttribute="centerX" secondItem="ZYy-zn-iql" secondAttribute="centerX" id="Wuj-Fl-8xH"/>
+                            <constraint firstItem="JPM-qr-S1W" firstAttribute="centerY" secondItem="ZYy-zn-iql" secondAttribute="centerY" id="aJP-rZ-Clj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EsF-Je-xLV" secondAttribute="trailing" id="aMF-NH-PCh"/>
+                            <constraint firstItem="JPM-qr-S1W" firstAttribute="centerX" secondItem="ZYy-zn-iql" secondAttribute="centerX" id="d4l-Tw-PRY"/>
+                            <constraint firstItem="F88-OP-3hk" firstAttribute="leading" secondItem="ZYy-zn-iql" secondAttribute="leadingMargin" id="ygV-gM-4Oo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="outcomeImage" destination="JPM-qr-S1W" id="OaS-5z-jic"/>
+                        <outlet property="player1Name" destination="1oN-oo-Qys" id="O4c-7x-xHl"/>
+                        <outlet property="player1Score" destination="vO4-UG-UnN" id="4JO-fJ-FTG"/>
+                        <outlet property="player2Name" destination="5yI-6y-rEX" id="EOS-p3-E3w"/>
+                        <outlet property="player2Score" destination="zdk-dt-7gF" id="HkQ-d9-leR"/>
+                        <outlet property="player2WantsRematch" destination="7An-yg-QFq" id="v8E-Ti-rfs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRK-gd-Dpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1303" y="1565"/>
         </scene>
     </scenes>
     <resources>
-        <image name="timeAttack-button.png" width="650" height="479"/>
-        <image name="timeTrial-button.png" width="650" height="479"/>
+        <image name="TA-gold-medal.png" width="537" height="553"/>
+        <image name="clock-badge.png" width="308" height="308"/>
+        <image name="multiplayer-badge.png" width="313" height="313"/>
+        <image name="sword-badge.png" width="308" height="308"/>
         <image name="timeattack-sign.png" width="2572" height="1023"/>
+        <image name="winner-medal.png" width="2572" height="1311"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fVG-ha-fR0"/>
