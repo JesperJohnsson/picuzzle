@@ -27,7 +27,10 @@
 		0B78AC291DEC477F00FA719D /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC281DEC477F00FA719D /* LoadingScreenViewController.swift */; };
 		0B78AC2B1DEC4BBC00FA719D /* FinishedScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */; };
 		0BECEC5E1DFC6AF600394156 /* FinishedMultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BECEC5D1DFC6AF600394156 /* FinishedMultiplayerViewController.swift */; };
+		0BF5C0671E014BDC00BC7E56 /* picuzzleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF5C0661E014BDC00BC7E56 /* picuzzleTests.swift */; };
+		0BF5C06F1E014C7400BC7E56 /* IndexViewControllerXCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF5C06E1E014C7400BC7E56 /* IndexViewControllerXCTestCase.swift */; };
 		36C63CD6E1D5A6264C72ACC3 /* Pods_picuzzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74B5454E4D3AAFEB99106F /* Pods_picuzzle.framework */; };
+		826DD92FE0AB91875E09C956 /* Pods_picuzzleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A27D6AA5A5692E33F0119B2 /* Pods_picuzzleTests.framework */; };
 		A30AF3AF1DFD626300677113 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30AF3AE1DFD626300677113 /* Message.swift */; };
 		A313BECB1DF5EFF000AFCD09 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A313BECA1DF5EFF000AFCD09 /* background.png */; };
 		A313BECE1DF5F7C500AFCD09 /* VCR-OSD-MONO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A313BECD1DF5F73300AFCD09 /* VCR-OSD-MONO.ttf */; };
@@ -94,6 +97,16 @@
 		A3D51B131DF6E0BE000F0182 /* timeTrial-button.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D51B121DF6E0BE000F0182 /* timeTrial-button.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0BF5C0691E014BDC00BC7E56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B6577991DDDDF7600DFE24E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B6577A01DDDDF7600DFE24E;
+			remoteInfo = picuzzle;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0B321D711DE2254300704BF9 /* HighscoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreViewController.swift; sourceTree = "<group>"; };
 		0B321D731DE2261B00704BF9 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
@@ -117,7 +130,14 @@
 		0B78AC281DEC477F00FA719D /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		0B78AC2A1DEC4BBC00FA719D /* FinishedScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedScreenViewController.swift; sourceTree = "<group>"; };
 		0BECEC5D1DFC6AF600394156 /* FinishedMultiplayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedMultiplayerViewController.swift; sourceTree = "<group>"; };
+		0BF5C0641E014BDC00BC7E56 /* picuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = picuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BF5C0661E014BDC00BC7E56 /* picuzzleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = picuzzleTests.swift; sourceTree = "<group>"; };
+		0BF5C0681E014BDC00BC7E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BF5C06E1E014C7400BC7E56 /* IndexViewControllerXCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexViewControllerXCTestCase.swift; sourceTree = "<group>"; };
+		37B64D43FD99BB53DE6B63A8 /* Pods-picuzzleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picuzzleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-picuzzleTests/Pods-picuzzleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A27D6AA5A5692E33F0119B2 /* Pods_picuzzleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_picuzzleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A74B5454E4D3AAFEB99106F /* Pods_picuzzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_picuzzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550AAFAB46AE2E0A020CACAA /* Pods-picuzzleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picuzzleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-picuzzleTests/Pods-picuzzleTests.release.xcconfig"; sourceTree = "<group>"; };
 		71CE8B4DCA7A5A7A7FBFD49D /* Pods-picuzzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picuzzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-picuzzle/Pods-picuzzle.release.xcconfig"; sourceTree = "<group>"; };
 		A30AF3AE1DFD626300677113 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A313BECA1DF5EFF000AFCD09 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -195,6 +215,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0BF5C0611E014BDC00BC7E56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826DD92FE0AB91875E09C956 /* Pods_picuzzleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -203,6 +231,8 @@
 			children = (
 				D9DEC8E33BA5CF8DF386CD5F /* Pods-picuzzle.debug.xcconfig */,
 				71CE8B4DCA7A5A7A7FBFD49D /* Pods-picuzzle.release.xcconfig */,
+				37B64D43FD99BB53DE6B63A8 /* Pods-picuzzleTests.debug.xcconfig */,
+				550AAFAB46AE2E0A020CACAA /* Pods-picuzzleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -228,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				0B6577A31DDDDF7600DFE24E /* picuzzle */,
+				0BF5C0651E014BDC00BC7E56 /* picuzzleTests */,
 				0B6577A21DDDDF7600DFE24E /* Products */,
 				0957CC0A440302CEF2957CD7 /* Pods */,
 				9FB7407F6669C5B320EE7F5D /* Frameworks */,
@@ -238,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				0B6577A11DDDDF7600DFE24E /* picuzzle.app */,
+				0BF5C0641E014BDC00BC7E56 /* picuzzleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,10 +311,21 @@
 			path = picuzzle;
 			sourceTree = "<group>";
 		};
+		0BF5C0651E014BDC00BC7E56 /* picuzzleTests */ = {
+			isa = PBXGroup;
+			children = (
+				0BF5C0661E014BDC00BC7E56 /* picuzzleTests.swift */,
+				0BF5C0681E014BDC00BC7E56 /* Info.plist */,
+				0BF5C06E1E014C7400BC7E56 /* IndexViewControllerXCTestCase.swift */,
+			);
+			path = picuzzleTests;
+			sourceTree = "<group>";
+		};
 		9FB7407F6669C5B320EE7F5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				4A74B5454E4D3AAFEB99106F /* Pods_picuzzle.framework */,
+				3A27D6AA5A5692E33F0119B2 /* Pods_picuzzleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -428,6 +471,27 @@
 			productReference = 0B6577A11DDDDF7600DFE24E /* picuzzle.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0BF5C0631E014BDC00BC7E56 /* picuzzleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BF5C06D1E014BDC00BC7E56 /* Build configuration list for PBXNativeTarget "picuzzleTests" */;
+			buildPhases = (
+				EAF17DF03BF9915BD3DF88A4 /* [CP] Check Pods Manifest.lock */,
+				0BF5C0601E014BDC00BC7E56 /* Sources */,
+				0BF5C0611E014BDC00BC7E56 /* Frameworks */,
+				0BF5C0621E014BDC00BC7E56 /* Resources */,
+				677CCDFF3300FF496FFFE2DE /* [CP] Embed Pods Frameworks */,
+				FDBE059FD7EEA6DDE9BA57E8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BF5C06A1E014BDC00BC7E56 /* PBXTargetDependency */,
+			);
+			name = picuzzleTests;
+			productName = picuzzleTests;
+			productReference = 0BF5C0641E014BDC00BC7E56 /* picuzzleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -442,6 +506,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = ZYR4LS2CV4;
 						ProvisioningStyle = Automatic;
+					};
+					0BF5C0631E014BDC00BC7E56 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0B6577A01DDDDF7600DFE24E;
 					};
 				};
 			};
@@ -459,6 +528,7 @@
 			projectRoot = "";
 			targets = (
 				0B6577A01DDDDF7600DFE24E /* picuzzle */,
+				0BF5C0631E014BDC00BC7E56 /* picuzzleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -531,6 +601,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0BF5C0621E014BDC00BC7E56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -547,6 +624,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		677CCDFF3300FF496FFFE2DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-picuzzleTests/Pods-picuzzleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA92FE881020195275B65A25 /* [CP] Copy Pods Resources */ = {
@@ -577,6 +669,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-picuzzle/Pods-picuzzle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAF17DF03BF9915BD3DF88A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDBE059FD7EEA6DDE9BA57E8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-picuzzleTests/Pods-picuzzleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -613,7 +735,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0BF5C0601E014BDC00BC7E56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF5C06F1E014C7400BC7E56 /* IndexViewControllerXCTestCase.swift in Sources */,
+				0BF5C0671E014BDC00BC7E56 /* picuzzleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BF5C06A1E014BDC00BC7E56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B6577A01DDDDF7600DFE24E /* picuzzle */;
+			targetProxy = 0BF5C0691E014BDC00BC7E56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0B6577AE1DDDDF7600DFE24E /* Main.storyboard */ = {
@@ -756,6 +895,34 @@
 			};
 			name = Release;
 		};
+		0BF5C06B1E014BDC00BC7E56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37B64D43FD99BB53DE6B63A8 /* Pods-picuzzleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = picuzzleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = development.picuzzleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/picuzzle.app/picuzzle";
+			};
+			name = Debug;
+		};
+		0BF5C06C1E014BDC00BC7E56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 550AAFAB46AE2E0A020CACAA /* Pods-picuzzleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = picuzzleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = development.picuzzleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/picuzzle.app/picuzzle";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -776,6 +943,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		0BF5C06D1E014BDC00BC7E56 /* Build configuration list for PBXNativeTarget "picuzzleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BF5C06B1E014BDC00BC7E56 /* Debug */,
+				0BF5C06C1E014BDC00BC7E56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
