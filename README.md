@@ -20,3 +20,5 @@ Go to the installation directory, as we specified picuzzle as our target directo
 * open the generated file picuzzle.xcworkspace
 * start the simulator
 * you should now be up and running and being able to test picuzzle.
+
+The first time that you run the "pod install" command it could be a quite long process taking up to 45min if you haven't used cocoapods at all before.
